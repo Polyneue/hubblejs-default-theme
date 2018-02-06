@@ -1,0 +1,28 @@
+{
+  "name": "hubblejs-default-theme",
+  "version": "0.0.1",
+  "description": "Default theme for HubbleJS Github templating engine",
+  "main": "index.ejs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Polyneue/hubblejs-default-theme.git"
+  },
+  "keywords": [
+    "theme",
+    "hubblejs",
+    "github",
+    "static",
+    "portfolio",
+    "site",
+    "developer"
+  ],
+  "author": "Ed Mendoza <polyneue@gmail.com> (http://www.edmendoza.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Polyneue/hubblejs-default-theme/issues"
+  },
+  "homepage": "https://github.com/Polyneue/hubblejs-default-theme#readme"
+}
