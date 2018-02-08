@@ -4,3 +4,18 @@
     Render Head Information
     @param { Object } meta data
 %>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<%# Meta: Title %>
+<% if (meta.title) { %><title><%= meta.title %></title><% } %>
+
+<%# Meta: Description %>
+<% if (meta.description) { %><meta name="description" content="<%= meta.description %>"><% } %>
+
+<%# Meta: Favicon %>
+<% if (meta.favicon) { %>
+    <link rel="shortcut icon" href="<%= meta.favicon %>>" type="image/x-icon">
+    <link rel="icon" href="<%= meta.favicon %>>" type="image/x-icon">
+<% } %>

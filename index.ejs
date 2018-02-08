@@ -1,25 +1,13 @@
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-        <%# Meta: Title %>
-        <% if (meta.title) { %><title><%= meta.title %></title><% } %>
-
-        <%# Meta: Description %>
-        <% if (meta.description) { %><meta name="description" content="<%= meta.description %>"><% } %>
-
-        <%# Meta: Favicon %>
-        <% if (meta.favicon) { %>
-            <link rel="shortcut icon" href="<%= meta.favicon %>>" type="image/x-icon">
-            <link rel="icon" href="<%= meta.favicon %>>" type="image/x-icon">
-        <% } %>
+        <%# Head: Meta %>
+        <%- include('/base/head', { meta: meta }); %>
 
         <%# Theme: Styles %>
-        <%- include('/components/style', { theme: theme }); %>
+        <%- include('/base/style', { theme: theme }); %>
     </head>
-    <body class="is-<%= theme.type %>">
+
+    <body class="is-<%= theme.type %> header">
         <h1>Name = <%= user.name %></h1>
         <div>
             <p>user.avatarUrl = <%= user.avatarUrl %></p>

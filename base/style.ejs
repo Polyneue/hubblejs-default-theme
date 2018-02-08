@@ -12,6 +12,8 @@
         color: <%= theme.palette.secondary %>;
     }
     .header {
-        content: '<%= theme.headerPattern %>';
+        <%- include(`../patterns/${theme.pattern.name}`, { primary: theme.pattern.color.replace('#', '%23') }); %>
+        background-size: <%= theme.pattern.scale %>;
+        background-repeat: repeat;
     }
 </style>
