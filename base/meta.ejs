@@ -1,0 +1,27 @@
+<%#
+    Meta Partial
+    Theme: Hubble JS Default
+    Render Head Information
+    @param { Object } meta data
+%>
+
+<%# Standard Meta %>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<%# Description %>
+<meta name="description" content="<%= meta.description %>">
+
+<%# Title %>
+<title><%= meta.title %></title>
+
+<%# Favicon %>
+<%# TODO: Figure out how to load in a default favicon  %>
+<% if (meta.favicon) { %>
+    <link rel="shortcut icon" href="<%= meta.favicon %>" type="image/x-icon">
+    <link rel="icon" href="<%= meta.favicon %>" type="image/x-icon">
+<% } %>
+
+<%# Font %>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,600" rel="stylesheet">

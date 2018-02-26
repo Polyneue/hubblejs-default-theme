@@ -2,9 +2,10 @@
   "name": "hubblejs-default-theme",
   "version": "0.0.1",
   "description": "Default theme for HubbleJS Github templating engine",
-  "main": "index.ejs",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass src/scss/project.scss assets/css/project.min.css"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/Polyneue/hubblejs-default-theme/issues"
   },
-  "homepage": "https://github.com/Polyneue/hubblejs-default-theme#readme"
+  "homepage": "https://github.com/Polyneue/hubblejs-default-theme#readme",
+  "dependencies": {
+    "deepmerge": "^2.0.1",
+    "ejs": "^2.5.7"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
 }

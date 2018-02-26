@@ -1,0 +1,26 @@
+////
+// Objects: Header
+////
+
+.header {
+    background-color: $background-light;
+    border: 1px solid transparent;
+    border-color: $background-accent-light;
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
+    padding: 16px;
+
+    &__username {
+        display: inline-block;
+        font: 600 14px/1.2 $font-primary;
+    }
+
+    .is-dark & {
+        background-color: $background-dark;
+        border-color: $background-accent-dark;
+    }
+
+    .nav-is-active & {
+        padding-bottom: 10px;
+    }
+} // .header

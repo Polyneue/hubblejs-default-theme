@@ -2,5 +2,26 @@
     Header Partial
     Theme: Hubble JS Default
     Render Header Navigation
-    @param { Object } navigation data
+    @param { Object } navigation and user data
 %>
+<div class="container">
+    <header id="js-header"  class="header" role="banner">
+        <h1 class="header__username is-primary">@<%= user.username %></h1>
+
+        <%# Navigation %>
+        <% if (Object.keys(navigation).length) { %>
+            <span id="js-nav-toggle" class="nav__toggle">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+            <nav class="nav" role="navigation">
+                <% Object.keys(navigation).forEach(function (key) { %>
+                    <a href="<%= navigation[key] %>" target="_blank" class="nav__link">
+                        <%= key %>
+                    </a>
+                <% }); %>
+            </nav>
+        <% } %>
+    </header>
+</div>

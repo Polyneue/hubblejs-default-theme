@@ -11,9 +11,12 @@
     .is-secondary {
         color: <%= theme.palette.secondary %>;
     }
-    .header {
+    .pattern {
         <%- include(`../patterns/${theme.pattern.name}`, { primary: theme.pattern.color.replace('#', '%23') }); %>
         background-size: <%= theme.pattern.scale %>;
         background-repeat: repeat;
     }
+
+    <%# CSS %>
+    <%- include('../assets/css/project.min.css'); %>
 </style>

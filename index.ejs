@@ -1,56 +1,32 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <%# Head: Meta %>
-        <%- include('/base/head', { meta: meta }); %>
+        <%# Meta %>
+        <%- include('/base/meta', { meta: theme.meta, user: user }); %>
 
-        <%# Theme: Styles %>
+        <%# Styles %>
         <%- include('/base/style', { theme: theme }); %>
     </head>
 
-    <body class="is-<%= theme.type %> header">
-        <h1>Name = <%= user.name %></h1>
-        <div>
-            <p>user.avatarUrl = <%= user.avatarUrl %></p>
-            <img src="<%= user.avatarUrl %>" alt="<%= user.name %>">
+    <body class="is-<%= theme.type %>" role="main">
+        <div class="hero">
+            <%# Header %>
+            <%- include('/components/header', { navigation: theme.navigation, user: user }); %>
+
+            <%# About %>
+            <%- include('/layout/about', { theme: theme, user: user }); %>
         </div>
 
-        <%# Theme: Bio %>
-        <% if (theme.bio) { %>
-            <p>Bio = <%= theme.bio %></p>
-        <% } else { %>
-            <p>Bio = <%= user.bio %></p>
-        <% } %>
+        <%# Projects %>
+        <%- include('/layout/projects', { projects: repositories }); %>
 
-        <%# Theme: Social Media %>
-        <ul>
-            <% Object.keys(theme.socialMedia).forEach(function (key) { %>
-                <li><%= key %> = <%= theme.socialMedia[key] %></li>
-            <% }); %>
-        </ul>
+        <%# Gists %>
+        <%- include('/layout/gists', { gists: gists }); %>
 
-        <%# Github: User %>
-        <p>Company = <%= user.company %></p>
-        <p>Location = <%= user.location %></p>
-        <p>Followers Count = <%= user.followers.totalCount %></p>
-        <p>Gists Count = <%= user.gists.totalCount %></p>
-        <p>Repository Count = <%= user.repositories.totalCount %></p>
+        <%# Footer %>
+        <%- include('/layout/footer', { user: user }); %>
 
-        <%# Repositories %>
-        <% repositories.forEach(function (repo) { %>
-            <ul>
-                <li>Repository Owner ID = <%= repo.owner.id %></li>
-                <li>Repository Name = <%= repo.name %></li>
-                <li>Repsotiry Description = <%= repo.description %></li>
-                <li>Repository Url = <%= repo.url %></li>
-                <li>Repository HomePage Url = <%= repo.homepageUrl %></li>
-                <li>Repository Id = <%= repo.id %></li>
-                <li>Repository Primary Language = <%= repo.primaryLanguage.name %></li>
-                <li>Repository Language Color = <%= repo.primaryLanguage.color %></li>
-                <li>Repository Pushed At = <%= repo.pushedAt %></li>
-            </ul>
-        <% }); %>
-
-        <%# Enriched Data %>
-        <p>Enriched Data <%= enrichedData %></p>
+        <%# Footer: Scripts %>
+        <%- include('/base/script', { theme: theme }); %>
     </body>
-    </html>
+</html>

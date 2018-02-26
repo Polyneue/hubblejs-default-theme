@@ -1,0 +1,16 @@
+<%#
+    Script Partial
+    Theme: Hubble JS Default
+    Render Theme Styles
+%>
+<script type="text/javascript">
+    <%# Navigation %>
+    <% if (Object.keys(theme.navigation).length) { %>
+        var navToggle = document.getElementById('js-nav-toggle');
+        var header = document.getElementById('js-header');
+        navToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            header.classList.toggle('nav-is-active');
+        });
+    <% } %>
+</script>
