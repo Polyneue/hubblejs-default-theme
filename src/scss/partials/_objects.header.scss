@@ -9,6 +9,8 @@
     border-radius: 0 0 5px 5px;
     border-top: 0;
     padding: 16px;
+    position: relative;
+    z-index: 2;
 
     &__username {
         display: inline-block;
@@ -20,7 +22,22 @@
         border-color: $background-accent-dark;
     }
 
-    .nav-is-active & {
+    &.nav-is-active {
         padding-bottom: 10px;
     }
 } // .header
+
+.hero {
+    background-repeat: repeat;
+    position: relative;
+
+    &:before {
+        background-image: linear-gradient(to top, $background-light, rgba($background-light,.5));
+        bottom: 0;
+        content: '';
+        height: 30px;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+} // .hero

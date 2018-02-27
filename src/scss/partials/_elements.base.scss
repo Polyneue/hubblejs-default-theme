@@ -5,7 +5,12 @@
 // Layout
 .container {
     margin: 0 30px;
-}
+
+    @media #{$tablet-up} {
+        max-width: 710px;
+        margin: 0 auto;
+    }
+} // .container
 
 // Anchors
 a {

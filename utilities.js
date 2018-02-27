@@ -1,6 +1,7 @@
 /**
  * Create the default description
  * @param {Object} user - user data from Github
+ * @return {String} formatted description
  */
 const formatDescription = function (user) {
   let description = `${user.name} is a developer`;

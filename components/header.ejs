@@ -11,9 +11,8 @@
         <%# Navigation %>
         <% if (Object.keys(navigation).length) { %>
             <span id="js-nav-toggle" class="nav__toggle">
-                <i></i>
-                <i></i>
-                <i></i>
+                <i class="open"><%- include('../icons/bars.svg'); %></i>
+                <i class="close"><%- include('../icons/times.svg'); %></i>
             </span>
             <nav class="nav" role="navigation">
                 <% Object.keys(navigation).forEach(function (key) { %>

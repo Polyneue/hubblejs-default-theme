@@ -8,13 +8,14 @@
     .is-primary {
         color: <%= theme.palette.primary %>;
     }
+
     .is-secondary {
         color: <%= theme.palette.secondary %>;
     }
-    .pattern {
+
+    .hero-pattern {
         <%- include(`../patterns/${theme.pattern.name}`, { primary: theme.pattern.color.replace('#', '%23') }); %>
-        background-size: <%= theme.pattern.scale %>;
-        background-repeat: repeat;
+        background-size: <%= theme.pattern.size %>;
     }
 
     <%# CSS %>

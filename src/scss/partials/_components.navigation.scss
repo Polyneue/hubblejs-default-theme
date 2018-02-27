@@ -7,6 +7,12 @@
     overflow: hidden;
     text-align: center;
 
+    @media #{$tablet-up} {
+        height: auto;
+        display: inline-block;
+        float: right;
+    }
+
     &__link {
         border-bottom: 1px solid;
         border-color: $background-accent-light !important;
@@ -15,14 +21,29 @@
         font: 600 14px/1.2 $font-primary;
         padding: 10px 0;
 
+        @media #{$tablet-up} {
+            border: 0;
+            display: inline-block;
+            margin-right: 16px; // TODO: Double check this
+            padding: 0;
+        }
+
         &:first-child {
             border-top: 1px solid;
-        }
+
+            @media #{$tablet-up} {
+                border: 0;
+            }
+        } // .nav__link:first-child
 
         &:last-child {
             border-bottom: 0;
             padding-bottom: 0;
-        }
+
+            @media #{$tablet-up} {
+                margin-right: 0;
+            }
+        } // .nav__link:last-child
 
         .is-dark & {
             border-color: $background-accent-dark !important;
@@ -34,32 +55,25 @@
         cursor: pointer;
         display: inline-block;
         float: right;
-        height: 14px;
+        height: 16px;
         position: relative;
         width: 22px;
 
-        // Icon lines
-        i {
-            background-color: $text-secondary;
-            height: 2px;
-            position: absolute;
-            right: 0;
+        @media #{$tablet-up} {
+            display: none;
         }
 
-        i:nth-child(1) {
-            top: 0;
-            width: 21px;
+        svg {
+            fill: $text-secondary;
+            height: 16px;
         }
 
-        i:nth-child(2) {
-            margin-top: -1px;
-            top: 50%;
-            width: 15px;
+        .close {
+            display: none
         }
 
-        i:nth-child(3) {
-            bottom: 0;
-            width: 9px;
+        .open {
+            display: inline-block;
         }
     } // .header__nav-toggle
 
@@ -67,23 +81,18 @@
         height: auto;
         margin-top: 16px;
 
-        .nav__toggle i {
-            margin-top: -1px;
-            top: 50%;
-            transform-origin: center;
+        @media #{$tablet-up} {
+            margin-top: 0;
         }
-
-        .nav__toggle i:nth-child(1) {
-            transform: rotate(45deg);
-        }
-
-        .nav__toggle i:nth-child(2) {
-            display: none;
-        }
-
-        .nav__toggle i:nth-child(3) {
-            transform: rotate(-45deg);
-            width: 21px;
-        }
-    } // .nav-is-active
+    } // .nav.nav-is-active
 } // .nav
+
+// Navigation Toggle Active
+.nav-is-active .nav__toggle {
+    .close {
+        display: inline-block
+    }
+    .open {
+        display: none;
+    }
+} // .nav__toggle

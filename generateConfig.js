@@ -24,9 +24,9 @@ const generateConfig = function (data) {
       },
       navigation: {},
       pattern: {
-        name: 'hideout',
-        color: '#ff9900',
-        scale: '20%'
+        name: 'polka-dots',
+        color: '#DDDDDD',
+        scale: '30px'
       },
       socialMedia: {}
     }
