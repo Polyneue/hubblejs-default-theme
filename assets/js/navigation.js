@@ -1,1 +1,1 @@
-var e,t,n;e="is-active",t=document.getElementById("js-nav-toggle"),n=document.getElementById("js-header"),t.addEventListener("click",function(s){s.preventDefault(),n.classList.toggle(e),t.classList.toggle(e)});
+!function(e){var t="is-active",n=e.getElementById("js-nav-toggle"),s=e.getElementById("js-header");n.addEventListener("click",function(e){e.preventDefault(),s.classList.toggle(t),n.classList.toggle(t)})}(document);

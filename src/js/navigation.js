@@ -1,10 +1,10 @@
-(function () {
+(function (d) {
   var isActive = 'is-active';
-  var navToggle = document.getElementById('js-nav-toggle');
-  var header = document.getElementById('js-header');
-  navToggle.addEventListener('click', function (e) {
-    e.preventDefault();
+  var navToggle = d.getElementById('js-nav-toggle');
+  var header = d.getElementById('js-header');
+  navToggle.addEventListener('click', function (evt) {
+    evt.preventDefault();
     header.classList.toggle(isActive);
     navToggle.classList.toggle(isActive);
   });
-})();
+})(document);
