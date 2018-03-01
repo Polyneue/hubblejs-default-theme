@@ -10,9 +10,17 @@
         max-width: 710px;
         margin: 0 auto;
     }
+
+    @media #{$xdesktop-up} {
+        max-width: 1012px;
+    }
 } // .container
 
 // Anchors
 a {
     text-decoration: none;
+
+    &:hover {
+        color: darken($text-secondary, 10%);
+    }
 }

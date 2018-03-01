@@ -3,14 +3,15 @@
 ////
 
 .nav {
+    display: none;
     height: 0;
     overflow: hidden;
     text-align: center;
 
     @media #{$tablet-up} {
+        display: block;
         height: auto;
-        display: inline-block;
-        float: right;
+        text-align: right;
     }
 
     &__link {
@@ -50,49 +51,13 @@
         }
     } // .nav__link
 
-    &__toggle {
-        color: transparent;
-        cursor: pointer;
-        display: inline-block;
-        float: right;
-        height: 16px;
-        position: relative;
-        width: 22px;
-
-        @media #{$tablet-up} {
-            display: none;
-        }
-
-        svg {
-            fill: $text-secondary;
-            height: 16px;
-        }
-
-        .close {
-            display: none
-        }
-
-        .open {
-            display: inline-block;
-        }
-    } // .header__nav-toggle
-
-    .nav-is-active & {
+    .is-active & {
         height: auto;
         margin-top: 16px;
+        display: block;
 
         @media #{$tablet-up} {
             margin-top: 0;
         }
     } // .nav.nav-is-active
 } // .nav
-
-// Navigation Toggle Active
-.nav-is-active .nav__toggle {
-    .close {
-        display: inline-block
-    }
-    .open {
-        display: none;
-    }
-} // .nav__toggle
