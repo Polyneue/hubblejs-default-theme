@@ -15,7 +15,7 @@
 
     .hero-pattern {
         <%- include(`../patterns/${theme.pattern.name}`, { primary: theme.pattern.color.replace('#', '%23') }); %>
-        background-size: <%= theme.pattern.size %>;
+        background-size: <%= theme.pattern.size %> <%= theme.pattern.size %>;
     }
 
     <%# CSS %>
