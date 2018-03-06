@@ -2,9 +2,17 @@
     Social Partial
     Theme: Hubble JS Default
     Render Social Media Links
-    @param { Object } social media account url, name
+    @param { Object } social media { name:url }
 %>
-<span>
-    <%= label %>
-    <%= url %>
-</span>
+<div class="social-media">
+    <% Object.keys(social).forEach(function (key) { %>
+        <a
+            href="<%= social[key].url %>"
+            class="social-media__link <%= key %>"
+            title="<%= key %>"
+            target="_blank"
+        >
+            <%- include(`../icons/${key}.svg`); %>
+        </a>
+    <% }); %>
+</div>

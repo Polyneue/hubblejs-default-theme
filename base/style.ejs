@@ -20,4 +20,14 @@
 
     <%# CSS %>
     <%- include('../assets/css/project.min.css'); %>
+
+    <%# Social Media Styles %>
+    <% Object.keys(theme.social).forEach(function (key) { %>
+        .<%= key %> {
+            background-color: <%= theme.social[key].color %>;
+        }
+        .<%= key %>:hover {
+            background-color: <%= theme.social[key].color %>;
+        }
+    <% }); %>
 </style>

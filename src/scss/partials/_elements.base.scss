@@ -2,6 +2,16 @@
 // Elements: Base
 ////
 
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 14px/1.4 $font-primary;
+}
+
 // Layout
 .container {
     margin: 0 30px;
@@ -19,8 +29,22 @@
 // Anchors
 a {
     text-decoration: none;
+    color: $text-link;
+
+    &:visited {
+        color: $text-link;
+    }
 
     &:hover {
-        color: darken($text-secondary, 10%);
+        color: darken($text-link, 10%);
     }
+} // a
+
+// Fonts
+.f-light {
+    font-weight: 300;
+}
+
+.f-semi {
+    font-weight: 600;
 }

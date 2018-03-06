@@ -4,26 +4,39 @@
     Render About Section
     @param { Object } user and theme data
 %>
-<section>
-    <div class="columns">
-        <div class="column">
-            Avatar Here: <%= user.avatarUrl %>
+<div class="container">
+    <section class="about">
+        <div class="about__avatar">
+            <img src="<%= user.avatarUrl %>" alt="<%= user.name %>">
         </div>
-        <div class="column">
-            <%= user.name %> |
-            <%= user.location %> |
-            <%= user.websiteUrl %> |
-            <%= user.company %> |
-            <%= user.bio %>
 
-            <%# Theme: Social Media %>
-            <% if (Object.keys(theme.socialMedia).length) { %>
-                <div>
-                    <% Object.keys(theme.socialMedia).forEach(function (key) { %>
-                        <%- include('../components/social', { url: theme.socialMedia[key], label: key }); %>
-                    <% }); %>
-                </div>
+        <div class="about__bio">
+            <h1 class="about__name">
+                <span><%= user.name.split(' ')[0] %></span>
+                <span class="f-semi"><%= user.name.split(' ')[1] %></span>
+            </h1>
+            <p class="about__title"><%= theme.role %></p>
+
+            <%# Website %>
+            <% if (user.websiteUrl) { %>
+                <p class="about__url">
+                    <a href="<%= user.websiteUrl %>" class="f-semi" target="_blank">
+                        <%= user.websiteUrl %>
+                    </a>
+                </p>
+            <% } %>
+
+            <%# Social Media %>
+            <% if (theme.socialMedia !== false) { %>
+                <%- include('../components/social', { social: theme.socialMedia }); %>
+            <% } %>
+
+            <%# Description %>
+            <% if (theme.description !== false) { %>
+                <p class="about__description">
+                    <%= theme.description %>
+                </p>
             <% } %>
         </div>
-    </div>
-</section>
+    </section>
+</div>

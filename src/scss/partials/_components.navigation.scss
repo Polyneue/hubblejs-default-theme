@@ -18,8 +18,8 @@
         border-bottom: 1px solid;
         border-color: $background-accent-light !important;
         color: $text-secondary;
+        font-weight: 600;
         display: block;
-        font: 600 14px/1.2 $font-primary;
         padding: 10px 0;
 
         @media #{$tablet-up} {
@@ -27,6 +27,10 @@
             display: inline-block;
             margin-right: 16px; // TODO: Double check this
             padding: 0;
+        }
+
+        &:hover {
+            color: darken($text-secondary, 10%);
         }
 
         &:first-child {

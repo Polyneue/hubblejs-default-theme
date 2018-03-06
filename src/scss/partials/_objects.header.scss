@@ -20,7 +20,7 @@
 
     &__username {
         flex: 1;
-        font: 600 14px/1.2 $font-primary;
+        font-weight: 600;
     }
 
     &__nav-toggle {
@@ -84,7 +84,7 @@
         background-image: linear-gradient(to top, $background-light, rgba($background-light,.5));
         bottom: 0;
         content: '';
-        height: 30px;
+        height: 70%;
         position: absolute;
         width: 100%;
         z-index: 1;

@@ -9,9 +9,9 @@
     './partials/settings.media-queries';
 
 // Tools
-// @import
+@import
+    './partials/tools.mixins';
 //     './partials/tools.functions',
-//     './partials/tools.mixins';
 
 // Generics
 @import
@@ -23,12 +23,14 @@
 
 // Objects
 @import
-    './partials/objects.header';
+    './partials/objects.header',
+    './partials/objects.about';
     // './partials/objects.projects',
     // './partials/objects.gists';
 
 // Components
 @import
-    './partials/components.navigation';
+    './partials/components.navigation',
+    './partials/components.social-media';
     // './partials/components.project',
     // './partials/components.gist';

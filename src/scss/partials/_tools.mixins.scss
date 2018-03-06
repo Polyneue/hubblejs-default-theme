@@ -1,3 +1,13 @@
 ////
 // Tools - Mixins
 ////
+
+/**
+ * Output width and height in one line
+ * @param {String} $width
+ * @param {String} $height
+ */
+@mixin size($width, $height: $width) {
+    height: $height;
+    width: $width;
+}

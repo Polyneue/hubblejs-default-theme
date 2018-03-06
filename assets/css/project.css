@@ -1,3 +1,8 @@
+/**
+ * Output width and height in one line
+ * @param {String} $width
+ * @param {String} $height
+ */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,6 +46,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box; }
+
+body {
+  font: 400 14px/1.4 "Montserrat", "Helvetica", sans-serif; }
+
 .container {
   margin: 0 30px; }
   @media only screen and (min-width: 720px) {
@@ -52,9 +65,18 @@ table {
       max-width: 1012px; } }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #64B7FF; }
+  a:visited {
+    color: #64B7FF; }
   a:hover {
-    color: #8c8c8c; }
+    color: #319fff; }
+
+.f-light {
+  font-weight: 300; }
+
+.f-semi {
+  font-weight: 600; }
 
 .header {
   background-color: #FEFEFE;
@@ -72,7 +94,7 @@ a {
       flex-direction: row; } }
   .header__username {
     flex: 1;
-    font: 600 14px/1.2 "Montserrat", "Helvetica", sans-serif; }
+    font-weight: 600; }
   .header__nav-toggle {
     height: 16px;
     position: absolute;
@@ -112,10 +134,61 @@ a {
     background-image: linear-gradient(to top, #FEFEFE, rgba(254, 254, 254, 0.5));
     bottom: 0;
     content: '';
-    height: 30px;
+    height: 70%;
     position: absolute;
     width: 100%;
     z-index: 1; }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 16px; }
+  @media only screen and (min-width: 720px) {
+    .about {
+      flex-direction: row;
+      margin-top: 32px; } }
+  .about__avatar {
+    border: 4px solid #FEFEFE;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-bottom: 16px;
+    width: 128px; }
+    .about__avatar img {
+      display: block;
+      max-width: 100%; }
+    @media only screen and (min-width: 720px) {
+      .about__avatar {
+        height: 158px;
+        width: 158px;
+        max-width: 158px; } }
+    @media only screen and (min-width: 1024px) {
+      .about__avatar {
+        height: 200px;
+        width: 200px;
+        max-width: 200px; } }
+  .about__bio {
+    flex: 1; }
+    @media only screen and (min-width: 720px) {
+      .about__bio {
+        margin-left: 32px; } }
+  .about__name {
+    font-size: 24px;
+    margin-bottom: 8px; }
+    @media only screen and (min-width: 720px) {
+      .about__name {
+        font-size: 32px; } }
+  .about__title {
+    margin-bottom: 8px; }
+    @media only screen and (min-width: 720px) {
+      .about__title {
+        font-size: 16px; } }
+  .about__url {
+    margin-bottom: 8px; }
+  .about .social-media {
+    margin-bottom: 8px; }
 
 .nav {
   display: none;
@@ -131,8 +204,8 @@ a {
     border-bottom: 1px solid;
     border-color: #EFEFF4 !important;
     color: #A5A5A5;
+    font-weight: 600;
     display: block;
-    font: 600 14px/1.2 "Montserrat", "Helvetica", sans-serif;
     padding: 10px 0; }
     @media only screen and (min-width: 720px) {
       .nav__link {
@@ -140,6 +213,8 @@ a {
         display: inline-block;
         margin-right: 16px;
         padding: 0; } }
+    .nav__link:hover {
+      color: #8c8c8c; }
     .nav__link:first-child {
       border-top: 1px solid; }
       @media only screen and (min-width: 720px) {
@@ -160,3 +235,22 @@ a {
     @media only screen and (min-width: 720px) {
       .is-active .nav {
         margin-top: 0; } }
+
+.social-media {
+  text-align: left; }
+  .social-media__link {
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 8px;
+    position: relative; }
+    .social-media__link svg {
+      height: 16px;
+      width: 16px;
+      left: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+      position: absolute;
+      top: 50%;
+      fill: #FFF; }

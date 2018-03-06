@@ -1,19 +1,19 @@
 const path = require('path');
 const merge = require('deepmerge');
-const { formatDescription } = require('./utilities');
+const { formatDescription, formatRole, formatSocial } = require('./utilities');
 
 const generateConfig = function (data) {
   const { user } = data;
+  const role = data.theme.title || 'Developer';
+  const social = data.theme.socialMedia || false;
 
   // Default Configuration
   const config = {
     theme: {
-      src: {
-        html: path.join(__dirname, '.', 'index.ejs'),
-        assets: path.join(__dirname, '.', 'assets')
-      },
+      role: formatRole(user, role),
+      description: false,
       meta: {
-        description: formatDescription(user),
+        description: formatDescription(user, role),
         title: `${user.name}'s Development Portfolio`,
         favicon: '' // TODO: Figure out how to load in a default favicon
       },
@@ -25,10 +25,10 @@ const generateConfig = function (data) {
       navigation: {},
       pattern: {
         name: 'polka-dots',
-        color: '#DDDDDD',
-        scale: '30px'
+        color: '#EEE',
+        size: '20px'
       },
-      socialMedia: {}
+      social: formatSocial(social)
     }
   };
 

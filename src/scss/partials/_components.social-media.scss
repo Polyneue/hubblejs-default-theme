@@ -1,0 +1,25 @@
+////
+// Components: Social Media
+////
+
+.social-media {
+    text-align: left;
+
+    &__link {
+        @include size(28px);
+        border-radius: 100%;
+        display: inline-block;
+        margin-right: 8px;
+        position: relative;
+
+        svg {
+            @include size(16px);
+            left: 50%;
+            margin-left: -8px;
+            margin-top: -8px;
+            position: absolute;
+            top: 50%;
+            fill: #FFF;
+        }
+    } // .social-media__link
+} // .social-media
