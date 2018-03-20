@@ -10,6 +10,7 @@
     "prefer-arrow-callback": "off",
     "comma-dangle": "off",
     "func-names": "off",
-    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true } ]
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true } ],
+    "no-param-reassign": "off"
   }
 }

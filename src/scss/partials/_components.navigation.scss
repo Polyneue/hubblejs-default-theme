@@ -16,7 +16,7 @@
 
     &__link {
         border-bottom: 1px solid;
-        border-color: $background-accent-light !important;
+        border-color: $background-accent !important;
         color: $text-secondary;
         font-weight: 600;
         display: block;
@@ -49,10 +49,6 @@
                 margin-right: 0;
             }
         } // .nav__link:last-child
-
-        .is-dark & {
-            border-color: $background-accent-dark !important;
-        }
     } // .nav__link
 
     .is-active & {

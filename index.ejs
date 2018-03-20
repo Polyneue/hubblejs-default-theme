@@ -5,7 +5,7 @@
         <%- include('/base/meta', { meta: theme.meta, user: user }); %>
 
         <%# Styles %>
-        <%- include('/base/style', { theme: theme }); %>
+        <style><%- css %></style>
     </head>
 
     <body class="is-<%= theme.type %>" role="main">

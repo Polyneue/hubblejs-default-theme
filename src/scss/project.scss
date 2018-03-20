@@ -13,9 +13,14 @@
     './partials/tools.mixins';
 //     './partials/tools.functions',
 
+
 // Generics
 @import
-    './partials/generic.reset';
+'./partials/generic.reset';
+
+// Vendors
+@import
+    '../../node_modules/hero-patterns-scss/dist/entry';
 
 // Elements
 @import
@@ -31,6 +36,7 @@
 // Components
 @import
     './partials/components.navigation',
-    './partials/components.social-media';
+    './partials/components.social-media',
+    './partials/components.patterns';
     // './partials/components.project',
     // './partials/components.gist';

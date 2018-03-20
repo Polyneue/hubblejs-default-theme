@@ -7,7 +7,7 @@
 <div class="social-media">
     <% Object.keys(social).forEach(function (key) { %>
         <a
-            href="<%= social[key].url %>"
+            href="<%= social[key] %>"
             class="social-media__link <%= key %>"
             title="<%= key %>"
             target="_blank"

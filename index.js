@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const ejs = require('ejs');
-const generateConfig = require('./generateConfig');
+const generateConfig = require('./modules/generate-config');
+const enrichConfig = require('./modules/enrich-config');
+const generateCSS = require('./modules/generate-css');
 
 /**
  * Parse data and render the template to HTML
@@ -16,14 +18,24 @@ const renderTemplate = async function renderTemplate(data) {
     try {
       const src = await fs.readFileSync(srcFile, 'utf8');
       const template = ejs.compile(src, { root: srcPath });
-      const tmpData = generateConfig(data);
-      const render = template(tmpData);
+
+      // Merge the original data with the themes defaults
+      data = generateConfig(data);
+
+      // Enrich some theme specific options
+      data = enrichConfig(data);
+
+      // Generate CSS/JS to attach to the data object
+      data.css = await generateCSS(data);
+      // data.js = await generateJS();
+
+      const render = template(data);
 
       resolve(render);
     } catch (err) {
       reject(err);
     }
   });
-}
+};
 
 module.exports = renderTemplate;

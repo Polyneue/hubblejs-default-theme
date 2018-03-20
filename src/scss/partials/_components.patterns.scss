@@ -1,0 +1,20 @@
+////
+// Components: Patterns
+////
+
+// Patterns are references to hero-patterns
+// TODO: Migrate all of the pattern names into this list.
+$pattern-map: (
+    'anchors-away': $anchors-away,
+    'architect': $architect,
+    'autumn': $autumn,
+    'topography': $topography
+);
+
+$pattern: map-get($pattern-map, #{$pattern-name});
+
+.hero-pattern {
+    background-image: hero-pattern($pattern, #{$pattern-fill}, #{$pattern-opacity});
+    background-size: #{$pattern-size} #{$pattern-size};
+    background-repeat: repeat;
+}
