@@ -27,7 +27,6 @@ const renderTemplate = async function renderTemplate(data) {
 
       // Generate CSS/JS to attach to the data object
       data.css = await generateCSS(data);
-      // data.js = await generateJS();
 
       const render = template(data);
 

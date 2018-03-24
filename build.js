@@ -1,25 +1,8 @@
 const fs = require('fs');
-const postcss = require('postcss');
-const autoprefixer = require('autoprefixer');
-const mqPacker = require('css-mqpacker');
-const cssnano = require('cssnano');
-const uglify = require('uglify-js');
+const uglify = require('uglify-js'); // eslint-disable-line
 
-const cssIn = './assets/css/project.css';
-const cssOut = './assets/css/project.min.css';
 const jsIn = './src/js';
 const jsOut = './assets/js';
-
-// CSS
-fs.readFile(cssIn, function (err, css) {
-  postcss([ autoprefixer, mqPacker, cssnano ])
-    .process(css, { from: cssIn, to: cssOut })
-    .then(function (result) {
-      fs.writeFile(cssOut, result.css, function(err) {
-        if (err) throw err;
-      });
-    });
-});
 
 // JS
 const options = {
@@ -31,6 +14,9 @@ const options = {
   }
 };
 
+/**
+ * Build and minify js files from ./src to ./assets
+ */
 fs.readdir(jsIn, function (err, files) {
   if (err) throw err;
   files.forEach(function (file) {

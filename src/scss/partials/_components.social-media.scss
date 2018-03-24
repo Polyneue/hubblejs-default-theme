@@ -2,30 +2,8 @@
 // Components: Social Media
 ////
 
-.social-media {
-    text-align: left;
-
-    &__link {
-        @include size(28px);
-        border-radius: 100%;
-        display: inline-block;
-        margin-right: 8px;
-        position: relative;
-
-        svg {
-            @include size(16px);
-            left: 50%;
-            margin-left: -8px;
-            margin-top: -8px;
-            position: absolute;
-            top: 50%;
-            fill: #FFF;
-        }
-    } // .social-media__link
-} // .social-media
-
-// Set up social media brand map
-$brand-map: (
+// Social media brand
+$social-brand-map: (
     behance: #0057FF,
     bitbucket: #0057D8,
     codepen: #111111,
@@ -40,13 +18,36 @@ $brand-map: (
     twitter: #1DA1F2
 );
 
-// Iterate over possible social media icons
+// Social media base styles
+.social-media {
+    text-align: left;
+
+    &__link {
+        @include size(28px);
+        border-radius: 100%;
+        display: inline-block;
+        margin-right: 8px;
+        position: relative;
+
+        svg {
+            @include size(16px);
+            fill: #FFF;
+            left: 50%;
+            margin-left: -8px;
+            margin-top: -8px;
+            position: absolute;
+            top: 50%;
+        }
+    } // .social-media__link
+} // .social-media
+
+// Iterate over added social media accounts
 @each $account in $social-media {
     .#{$account} {
-        background-color: map-get($brand-map, $account);
+        background-color: map-get($social-brand-map, $account);
 
         &:hover {
-            background-color: darken(map-get($brand-map, $account), 10%);
+            background-color: darken(map-get($social-brand-map, $account), 10%);
         }
     } // .brand-account
 } // @each

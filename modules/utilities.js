@@ -1,3 +1,5 @@
+/* eslint-disable no-fallthrough */
+
 /**
  * Create the default description
  * @param {Object} user - user data from Github
@@ -20,10 +22,10 @@ const formatDescription = function (user, role) {
   }
 
   description += `They have ${user.repositories.totalCount} featured projects`;
-  description += ` and ${user.gists.totalCount} recent gists.`
+  description += ` and ${user.gists.totalCount} recent gists.`;
 
   return description;
-}
+};
 
 /**
  * Create the default description
@@ -36,7 +38,7 @@ const formatRole = function (user, role) {
 
   switch (true) {
     case user.company !== undefined:
-    description += ` at ${user.company}`;
+      description += ` at ${user.company}`;
     case user.location !== undefined:
       description += ` in ${user.location}`;
     default:

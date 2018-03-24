@@ -46,9 +46,13 @@
         }
     } // .about__bio
 
+    &__description,
+    .social-media {
+        margin-bottom: 12px;
+    }
+
     &__name {
         font-size: 24px;
-        margin-bottom: 8px;
 
         @media #{$tablet-up} {
             font-size: 32px;
@@ -56,22 +60,10 @@
     } // .about__name
 
     &__title {
-        margin-bottom: 8px;
+        margin-bottom: 16px;
 
         @media #{$tablet-up} {
             font-size: 16px;
         }
     } // .about__title
-
-    &__description {}
-
-    &__url {
-        margin-bottom: 8px;
-    }
-
-    &__gh {}
-
-    .social-media {
-        margin-bottom: 8px;
-    }
 } // .about

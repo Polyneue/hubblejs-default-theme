@@ -17,15 +17,6 @@
             </h1>
             <p class="about__title"><%= theme.role %></p>
 
-            <%# Website %>
-            <% if (user.websiteUrl) { %>
-                <p class="about__url">
-                    <a href="<%= user.websiteUrl %>" class="f-semi" target="_blank">
-                        <%= user.websiteUrl %>
-                    </a>
-                </p>
-            <% } %>
-
             <%# Social Media %>
             <% if (theme.socialMedia !== false) { %>
                 <%- include('../components/social', { social: theme.social }); %>
@@ -35,6 +26,15 @@
             <% if (theme.description !== false) { %>
                 <p class="about__description">
                     <%= theme.description %>
+                </p>
+            <% } %>
+
+            <%# Website %>
+            <% if (user.websiteUrl) { %>
+                <p class="about__url">
+                    <a href="http://<%= user.websiteUrl %>" class="f-semi" target="_blank">
+                        <%= user.websiteUrl %>
+                    </a>
                 </p>
             <% } %>
         </div>

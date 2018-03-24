@@ -1,14 +1,15 @@
 const path = require('path');
 const { promisify } = require('util');
-// const postcss = require('postcss');
-// const autoprefixer = require('autoprefixer');
-// const mqPacker = require('css-mqpacker');
-// const cssnano = require('cssnano');
+const postcss = require('postcss');
+const autoprefixer = require('autoprefixer');
+const mqPacker = require('css-mqpacker');
+const cssnano = require('cssnano');
 const sass = require('node-sass');
 
 const sassRenderAsync = promisify(sass.render);
 
 const src = path.join(__dirname, '..', 'src', 'scss', 'project.scss');
+const plugins = [autoprefixer, mqPacker, cssnano];
 
 /**
  * Format variables to string
@@ -31,17 +32,7 @@ const handleVariables = function (obj) {
 
     variables.push(`$${prop}:${output};`);
   }
-
   return variables.join('\n');
-};
-
-/**
- * Format import paths to string
- * @param {String} srcPath - path to import
- * @return {String} formatted import
- */
-const handleImports = function (srcPath) {
-  return `@import "${srcPath}";`;
 };
 
 /**
@@ -50,8 +41,7 @@ const handleImports = function (srcPath) {
  * @param {Object} variables - dynamic vars for sass
  */
 const dynamicSass = async function (entry, variables) {
-  // TODO: Move handleVariables and handleImports into this fn
-  const data = handleVariables(variables) + handleImports(entry);
+  const data = `${handleVariables(variables)}@import "${entry}";`;
   const entryPath = path.dirname(entry);
   const sassOptions = {
     includePaths: [entryPath],
@@ -67,8 +57,9 @@ const dynamicSass = async function (entry, variables) {
 };
 
 /**
- *
+ * Generate and optimize css given options
  * @param {Object} data - theme objects
+ * @return {String} css output
  */
 const generateCSS = async function (data) {
   const { type, socialCSS, pattern } = data.theme;
@@ -87,10 +78,8 @@ const generateCSS = async function (data) {
 
   try {
     const css = await dynamicSass(src, variables);
-
-    // TODO: Implement optimization fns
-
-    return css;
+    const output = await postcss(plugins).process(css, { from: undefined });
+    return output;
   } catch (err) {
     throw err;
   }
