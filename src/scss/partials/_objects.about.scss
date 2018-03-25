@@ -5,14 +5,14 @@
 .about {
     display: flex;
     flex-direction: column;
-    margin-top: 16px;
+    margin: 16px 0;
     padding-bottom: 16px;
     position: relative;
     z-index: 2;
 
     @media #{$tablet-up} {
         flex-direction: row;
-        margin-top: 32px;
+        margin: 32px 0;
     }
 
     &__avatar {

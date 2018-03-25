@@ -1,0 +1,76 @@
+////
+// Objects: Stats
+////
+
+.stats {
+    position: relative;
+    z-index: 2;
+
+    @media #{$tablet-up} {
+        margin-bottom: 16px;
+    }
+} // .stats
+
+.stats-list {
+    border-bottom: 1px solid $background-accent;
+    border-top: 1px solid $background-accent;
+    display: flex;
+    text-align: center;
+
+    @media #{$tablet-up} {
+        border: 1px solid $background-accent;;
+        border-radius: 5px;
+    }
+
+    &__item {
+        display: inline-flex;
+        flex: 1;
+        text-align: center;
+
+        &:first-child {
+            border-right: 1px solid $background-accent;
+        }
+
+        &:last-child {
+            border-left: 1px solid $background-accent;
+        }
+    } // .stats-list__item
+
+    &__link {
+        background-color: transparent;
+        padding: 12px 0;
+        transition: all 100ms linear;
+        width: 100%;
+
+        &:hover {
+            background-color: lighten($background-accent, 3%);
+        }
+
+        @media #{$tablet-up} {
+            padding: 8px 0;
+        }
+    } // .stats-list__link
+
+    &__link-number {
+        color: $text-primary;
+        display: block;
+        font-size: 18px;
+        line-height: 1;
+
+        @media #{$tablet-up} {
+            display: inline-block;
+            margin-right: 8px;
+        }
+    } // .stats-list__link-number
+
+    &__link-name {
+        color: $text-secondary;
+        font-size: 10px;
+        position: relative;
+        top: -2px;
+
+        @media #{$tablet-up} {
+            font-size: 12px;
+        }
+    } // .stats-list__link-name
+} // .stats-list

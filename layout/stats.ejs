@@ -1,0 +1,54 @@
+<%#
+    Stats Partial
+    Theme: Hubble JS Default
+    Render Github Stats Section
+    @param { Object } user data
+%>
+<div class="container container--stats">
+    <section class="stats">
+        <ul class="stats-list">
+            <li class="stats-list__item">
+                <a
+                    href="https://github.com/<%= user.username %>?tab=repositories"
+                    class="stats-list__link"
+                    target="_blank"
+                >
+                    <span class="stats-list__link-number">
+                        <%= user.repositories.totalCount %>
+                    </span>
+                    <span class="stats-list__link-name f-semi">Repositories</span>
+                </a>
+            </li><!-- /.stats-list__item -->
+
+            <% if (user.gists.totalCount > 0) { %>
+                <li class="stats-list__item">
+                    <a
+                        href="https://gist.github.com/<%= user.username %>"
+                        class="stats-list__link"
+                        target="_blank"
+                    >
+                        <span class="stats-list__link-number">
+                            <%= user.gists.totalCount %>
+                        </span>
+                        <span class="stats-list__link-name f-semi">Gists</span>
+                    </a>
+                </li><!-- /.stats-list__item -->
+            <% } %>
+
+            <% if (user.followers.totalCount > 0) { %>
+                <li class="stats-list__item">
+                    <a
+                        href="https://github.com/<%= user.username %>?tab=followers"
+                        class="stats-list__link"
+                        target="_blank"
+                    >
+                        <span class="stats-list__link-number">
+                            <%= user.followers.totalCount %>
+                        </span>
+                        <span class="stats-list__link-name f-semi">Followers</span>
+                    </a>
+                </li><!-- /.stats-list__item -->
+            <% } %>
+        </ul><!-- /.stats-list -->
+    </section><!-- /.stats -->
+</div><!-- /.conatiner -->

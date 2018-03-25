@@ -26,6 +26,19 @@ body {
     }
 } // .container
 
+.container--stats {
+    margin: 0;
+
+    @media #{$tablet-up} {
+        max-width: 710px;
+        margin: 0 auto;
+    }
+
+    @media #{$xdesktop-up} {
+        max-width: 1012px;
+    }
+} // .container--stats
+
 // Anchors
 a {
     color: $text-link;
