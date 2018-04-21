@@ -28,13 +28,13 @@
   },
   "homepage": "https://github.com/Polyneue/hubblejs-default-theme#readme",
   "dependencies": {
-    "deepmerge": "^2.0.1",
-    "ejs": "^2.5.7",
-    "hero-patterns-scss": "^1.0.3",
-    "node-sass": "^4.7.2",
     "autoprefixer": "^8.0.0",
     "css-mqpacker": "^6.0.2",
     "cssnano": "^3.10.0",
+    "deepmerge": "^2.0.1",
+    "ejs": "^2.5.7",
+    "hero-patterns-scss": "^1.1.0",
+    "node-sass": "^4.7.2",
     "postcss": "^6.0.19"
   },
   "devDependencies": {

@@ -77,10 +77,10 @@
     position: relative;
 
     &:before {
-        background-image: linear-gradient(to top, $background, rgba($background,.5));
+        background-image: linear-gradient(to top, $background 20%, rgba($background, .5) 70%, rgba($background, .0) 100%);
         bottom: 0;
         content: '';
-        height: 70%;
+        height: 100%;
         position: absolute;
         width: 100%;
         z-index: 1;
