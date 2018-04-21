@@ -4,6 +4,23 @@
     Render Featured Projects Section
     @param { Array } collection of repositories
 %>
-<section>
-    <p>Projects</p>
+<section class="projects">
+    <header>
+        <div class="container">
+            <h2 class="projects__header f-semi">Featured Projects</h2>
+
+            <%# Create Filters if there are more than one language %>
+            <% if (theme.languages.length) { %>
+                <%- include('../components/filter', { languages: theme.languages }) %>
+            <% } %>
+        </div><!-- /.container -->
+    </header><!-- /header -->
+
+    <div class="container container--projects">
+        <ul class="projects__list">
+            <% projects.forEach(function (project) { %>
+                <%- include('../components/project', { project }) %>
+            <% }); %>
+        </ul>
+    </div><!-- /.container -->
 </section>

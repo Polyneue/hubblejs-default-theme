@@ -9,7 +9,7 @@ const sass = require('node-sass');
 const sassRenderAsync = promisify(sass.render);
 
 const src = path.join(__dirname, '..', 'src', 'scss', 'project.scss');
-const plugins = [autoprefixer, mqPacker, cssnano];
+const plugins = [autoprefixer, mqPacker({ sort: true }), cssnano];
 
 /**
  * Format variables to string

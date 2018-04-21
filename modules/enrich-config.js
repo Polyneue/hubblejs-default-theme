@@ -6,11 +6,18 @@ const { formatDescription, formatRole } = require('./utilities');
  * @return {Object} data with enriched props
  */
 const enrichConfig = function (data) {
-  const { user } = data;
+  const { user, repositories } = data;
   const { title, social } = data.theme;
 
   // Format and add the role
   data.theme.role = formatRole(user, title);
+
+  // Pull out filter options
+  data.theme.languages = repositories
+    .map(repo => repo.primaryLanguage.name)
+    .filter(function (language, index, arr) {
+      return arr.indexOf(language) === index;
+    });
 
   // Format the title
   if (data.theme.meta.title.trim().length === 0) {

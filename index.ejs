@@ -21,7 +21,7 @@
         </div>
 
         <%# Projects %>
-        <%- include('/layout/projects', { projects: repositories }); %>
+        <%- include('/layout/projects', { theme: theme, projects: repositories }); %>
 
         <%# Gists %>
         <%- include('/layout/gists', { gists: gists }); %>

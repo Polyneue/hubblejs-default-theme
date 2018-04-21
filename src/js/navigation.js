@@ -1,4 +1,5 @@
 (function (d) {
+  // TODO: Revisit this with babel possibly
   var isActive = 'is-active';
   var navToggle = d.getElementById('js-nav-toggle');
   var header = d.getElementById('js-header');
@@ -7,4 +8,4 @@
     header.classList.toggle(isActive);
     navToggle.classList.toggle(isActive);
   });
-})(document);
+}(document));

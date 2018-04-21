@@ -1,0 +1,19 @@
+<%#
+    Project Partial
+    Theme: Hubble JS Default
+    Render Project Card
+    @param { Object } project data
+%>
+<div class="projects-filter">
+    <p class="projects-filter__label">Filter:</p>
+
+    <ul class="projects-filter__list">
+        <li class="projects-filter__link js-filter-toggle is-active" data-language="all">All Projects</li>
+
+        <% languages.forEach(function (language) { %>
+            <li class="projects-filter__link js-filter-toggle" data-language="<%= language %>">
+                <%= language %>
+            </li>
+        <% }); %>
+    </ul>
+</div>

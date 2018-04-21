@@ -9,7 +9,7 @@
 }
 
 body {
-    font: 400 14px/1.4 #{$font-primary};
+    font: 300 14px/1.4 #{$font-primary};
 }
 
 // Layout
@@ -39,11 +39,17 @@ body {
     }
 } // .container--stats
 
+.container--projects {
+    @media #{$xdesktop-up} {
+        max-width: 1140px;
+    }
+} // .container--projects
+
 // Anchors
 a {
     color: $text-link;
     text-decoration: none;
-    transition: all 200ms linear;
+    transition: all 75ms linear;
 
     &:visited {
         color: $text-link;
@@ -57,6 +63,10 @@ a {
 // Fonts
 .f-light {
     font-weight: 300;
+}
+
+.f-medium {
+    font-weight: 500;
 }
 
 .f-semi {
