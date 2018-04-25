@@ -1,11 +1,11 @@
-(function (d) {
-  // TODO: Revisit this with babel possibly
-  d.addEventListener('DOMContentLoaded', function () {
-    var isActive = 'is-active';
-    var isHidden = 'is-faded';
+/* eslint-env browser */
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    const isActive = 'is-active';
+    const isHidden = 'is-faded';
 
-    var filter = d.querySelectorAll('.js-filter-toggle');
-    var projects = d.querySelectorAll('.js-filter-project');
+    const filter = document.querySelectorAll('.js-filter-toggle');
+    const projects = document.querySelectorAll('.js-filter-project');
 
     /**
      * Toggle active on project elements
@@ -13,9 +13,9 @@
      * @param {Array} items - collection of html elements
      */
     function filterProjects(language, items) {
-      for (var i = 0; i < items.length; i++) {
-        var item = items[i];
-        var itemLanguage = item.getAttribute('data-language');
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        const itemLanguage = item.getAttribute('data-language');
 
         if (itemLanguage !== language && language !== 'all') {
           item.classList.add(isHidden);
@@ -25,11 +25,11 @@
       }
     }
 
-    for (var i = 0; i < filter.length; i++) {
+    for (let i = 0; i < filter.length; i++) {
       filter[i].addEventListener('click', function () {
-        var language = this.getAttribute('data-language');
+        const language = this.getAttribute('data-language');
 
-        for (var j = 0; j < filter.length; j++) {
+        for (let j = 0; j < filter.length; j++) {
           filter[j].classList.remove('is-active');
         }
 
@@ -38,4 +38,4 @@
       });
     }
   });
-}(document));
+}());

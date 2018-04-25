@@ -1,1 +1,0 @@
-!function(e){var t="is-active",n=e.getElementById("js-nav-toggle"),s=e.getElementById("js-header");n.addEventListener("click",function(e){e.preventDefault(),s.classList.toggle(t),n.classList.toggle(t)})}(document);

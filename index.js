@@ -4,6 +4,7 @@ const ejs = require('ejs');
 const generateConfig = require('./modules/generate-config');
 const enrichConfig = require('./modules/enrich-config');
 const generateCSS = require('./modules/generate-css');
+const generateJS = require('./modules/generate-js');
 
 /**
  * Parse data and render the template to HTML
@@ -27,9 +28,10 @@ const renderTemplate = async function renderTemplate(data) {
 
       // Generate CSS/JS to attach to the data object
       data.css = await generateCSS(data);
+      data.js = await generateJS(data);
 
+      // Render the template
       const render = template(data);
-
       resolve(render);
     } catch (err) {
       reject(err);
