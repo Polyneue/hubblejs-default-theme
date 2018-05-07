@@ -1,0 +1,34 @@
+<%#
+    Gists Partial
+    Theme: Hubble JS Default
+    Render Recent Gists Section
+    @param { Array } collection of gists
+    @param { Array } collection of contributions
+%>
+<section class="gists-contributions">
+    <div class="container container--flex">
+        <div class="gists">
+            <header>
+                <h2 class="gists__header f-semi">Recent Gists</h2>
+            </header>
+
+            <ul class="gists__list">
+                <% gists.forEach(function (gist) { %>
+                    <%- include('../components/gist', { gist }); %>
+                <% }); %>
+            </ul>
+        </div>
+
+        <div class="contributions">
+            <header>
+                <h2 class="contributions__header f-semi">Contributions</h2>
+            </header>
+
+            <ul class="contributions__list">
+                <% contributions.forEach(function (contribution) { %>
+                    <%- include('../components/contribution', { contribution }); %>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</section>

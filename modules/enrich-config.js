@@ -1,4 +1,4 @@
-const { formatDescription, formatRole } = require('./utilities');
+const { formatDescription, formatRole, formatDate } = require('./utilities');
 
 /**
  * Format the config for working within the theme
@@ -33,6 +33,11 @@ const enrichConfig = function (data) {
   if (social !== undefined) {
     data.theme.socialCSS = Object.keys(data.theme.social);
   }
+
+  // Add the formatDate method
+  data.utilities = {
+    formatDate
+  };
 
   return data;
 };

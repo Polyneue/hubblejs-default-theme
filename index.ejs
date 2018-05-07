@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <%# Meta %>
-        <%- include('/base/meta', { meta: theme.meta, user: user }); %>
+        <%- include('/base/meta', { meta: theme.meta, user }); %>
 
         <%# Styles %>
         <style><%- css %></style>
@@ -11,23 +11,23 @@
     <body class="is-<%= theme.type %>" role="main">
         <div class="hero hero-pattern">
             <%# Header %>
-            <%- include('/components/header', { navigation: theme.navigation, user: user }); %>
+            <%- include('/components/header', { navigation: theme.navigation, user }); %>
 
             <%# About %>
-            <%- include('/layout/about', { theme: theme, user: user }); %>
+            <%- include('/layout/about', { theme, user }); %>
 
             <%# Stats %>
-            <%- include('/layout/stats', { user: user }); %>
+            <%- include('/layout/stats', { user }); %>
         </div>
 
         <%# Projects %>
-        <%- include('/layout/projects', { theme: theme, projects: repositories }); %>
+        <%- include('/layout/projects', { theme, projects: repositories }); %>
 
         <%# Gists %>
-        <%- include('/layout/gists', { gists: gists }); %>
+        <%- include('/layout/gists-contributions', { user, gists, contributions, utilities }); %>
 
         <%# Footer %>
-        <%- include('/layout/footer', { user: user }); %>
+        <%- include('/layout/footer', { user }); %>
 
         <%# Scripts %>
         <script type="text/javascript"><%- js %></script>

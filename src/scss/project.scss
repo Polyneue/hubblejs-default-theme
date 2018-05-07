@@ -31,8 +31,8 @@
     './partials/objects.header',
     './partials/objects.about',
     './partials/objects.stats',
-    './partials/objects.projects';
-    // './partials/objects.gists';
+    './partials/objects.projects',
+    './partials/objects.gists-contributions';
 
 // Components
 @import
@@ -40,5 +40,6 @@
     './partials/components.social-media',
     './partials/components.patterns',
     './partials/components.filter',
-    './partials/components.project';
-    // './partials/components.gist';
+    './partials/components.project',
+    './partials/components.gist',
+    './partials/components.contribution';

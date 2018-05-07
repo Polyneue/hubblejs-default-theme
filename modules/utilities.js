@@ -46,7 +46,26 @@ const formatRole = function (user, role) {
   }
 };
 
+/**
+ * Date to be parsed
+ * @param {String} date - to be parsed
+ * @return {String} formatted date time
+ */
+const formatDate = function (date) {
+  const dateInput = new Date(date);
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric'
+  };
+
+  return dateInput.toLocaleDateString('en-US', options);
+};
+
 module.exports = {
   formatDescription,
-  formatRole
+  formatRole,
+  formatDate
 };

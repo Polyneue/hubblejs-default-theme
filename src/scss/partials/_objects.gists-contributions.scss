@@ -1,0 +1,35 @@
+////
+// Objects: Gists and Contributions
+////
+
+// Layout
+.gists-contributions {
+    margin: 32px 0;
+}
+
+// Base Gists
+.gists {
+    flex: 2;
+    margin-right: 32px;
+
+    &__header {
+        color: #{$primary};
+        display: block;
+        font-size: 18px;
+        letter-spacing: .75px;
+        margin-bottom: 16px;
+    }
+} // .gists
+
+// Base Contributions
+.contributions {
+    flex: 1;
+
+    &__header {
+        color: #{$primary};
+        display: block;
+        font-size: 18px;
+        letter-spacing: .75px;
+        margin-bottom: 16px;
+    }
+} // .contributions

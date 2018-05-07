@@ -45,6 +45,15 @@ body {
     }
 } // .container--projects
 
+.container--flex {
+    display: flex;
+    flex-direction: column;
+
+    @media #{$tablet-up} {
+        flex-direction: row;
+    }
+} // .container--flex
+
 // Anchors
 a {
     color: $text-link;

@@ -4,6 +4,11 @@
     Render Gist Card
     @param { Object } gist data
 %>
-<article>
-    Gists Card
-</article>
+<li class="gist">
+    <a href="https://gist.github.com/<%= user.username %>/<%= gist.name %>" class="gist__link" target="_blank">
+        <span class="gist__description f-semi">
+            <%= gist.description %>
+        </span>
+        <span class="gist__date"><%= utilities.formatDate(gist.pushedAt) %></span>
+    </a>
+</li>
