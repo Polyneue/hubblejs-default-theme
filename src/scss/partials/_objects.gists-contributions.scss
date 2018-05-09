@@ -10,7 +10,10 @@
 // Base Gists
 .gists {
     flex: 2;
-    margin-right: 32px;
+
+    @media #{$tablet-up} {
+        margin-right: 32px;
+    }
 
     &__header {
         color: #{$primary};

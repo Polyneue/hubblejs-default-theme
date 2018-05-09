@@ -3,4 +3,21 @@
 ////
 
 // Base Contribution
-.contribution {}
+.contribution {
+    border-bottom: 1px solid $background-accent;
+    border-right: 1px solid $background-accent;
+
+    &__label {
+        display: block;
+        padding: 10px;
+    }
+
+    &:first-child {
+        border-top: 1px solid $background-accent;
+        border-top-right-radius: 5px;
+    }
+
+    &:last-child {
+        border-bottom-right-radius: 5px;
+    }
+} // .contribution

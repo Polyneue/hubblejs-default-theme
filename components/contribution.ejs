@@ -4,6 +4,8 @@
     Render Contribution Card
     @param { Object } contribution data
 %>
-<article>
-    <%= JSON.stringify(contribution); %>
-</article>
+<li class="contribution" style="border-left: 5px solid <%= contribution.primaryLanguage.color %>">
+    <a href="<%= contribution.url %>" class="contribution__label f-semi" target="_blank">
+        <%= contribution.name %>
+    </a>
+</li>
