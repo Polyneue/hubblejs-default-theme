@@ -3,6 +3,15 @@
     Theme: Hubble JS Default
     Render Footer
 %>
-<footer>
-    <p>Footer</p>
+<footer class="footer footer-pattern">
+    <div class="container">
+        <div class="footer__wrap">
+            <p>
+                &copy; <%= date %> <%= user.name %>. Built with
+                <a href="https://github.com/Polyneue/hubblejs" rel="nofollow" class="footer__hubblejs f-semi">
+                    Hubble.js
+                </a>
+            </p>
+        </div>
+    </div>
 </footer>

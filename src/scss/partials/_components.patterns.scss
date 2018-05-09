@@ -2,7 +2,8 @@
 // Components: Patterns
 ////
 
-.hero-pattern {
+.hero-pattern,
+.footer-pattern {
     background-image: hero-pattern(#{$pattern-name}, #{$pattern-fill}, #{$pattern-opacity});
     background-size: #{$pattern-size} #{$pattern-size};
     background-repeat: repeat;

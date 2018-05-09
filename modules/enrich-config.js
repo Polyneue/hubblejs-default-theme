@@ -34,6 +34,10 @@ const enrichConfig = function (data) {
     data.theme.socialCSS = Object.keys(data.theme.social);
   }
 
+  // Build Date
+  const date = formatDate(Date.now());
+  data.date = date.split(',')[1].trim();
+
   // Add the formatDate method
   data.utilities = {
     formatDate
