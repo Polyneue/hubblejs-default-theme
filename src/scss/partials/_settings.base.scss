@@ -1,0 +1,46 @@
+////
+// Settings: Base
+////
+
+// Colors
+// ====================
+$white:                     #FFFFFF;
+$black:                     #000000;
+$primary:                   #{$primary};
+$secondary:                 #{$secondary};
+
+// Text
+$text-primary:              #000F3E !default;
+$text-secondary:            #A5A5A5 !default;
+$text-link:                 #64B7FF !default;
+
+// Background
+$background:                #FEFEFE !default;
+$background-accent:         #EFEFF4 !default;
+
+// Background
+@if ($type == 'dark') {
+    $text-primary:          #EEEEEE;
+    $background:            #1A1A1A;
+    $background-accent:     #3B3B3B;
+}
+
+
+// Typography
+// ====================
+$font-primary: 'Montserrat', 'Helvetica', sans-serif;
+
+
+// Patterns
+// ====================
+$pattern-name:              #{$pattern-name};
+$pattern-fill:              #{$pattern-fill};
+$pattern-opacity:           #{$pattern-opacity};
+$pattern-size:              #{$pattern-size};
+
+
+// Media Queries
+// ====================
+$tablet-up:     'only screen and (min-width: 720px)';
+$desktop-up:    'only screen and (min-width: 800px)';
+$xdesktop-up:   'only screen and (min-width: 1024px)';

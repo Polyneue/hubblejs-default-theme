@@ -2,23 +2,23 @@
 // Components: Project
 ////
 
+// Project
 .project {
     background-color: $background;
     border-radius: 5px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .1);
     flex-grow: 1;
     flex: 1;
-    margin-bottom: 16px;
-    margin: 0 8px 16px;
+    margin: 0 0 16px;
     position: relative;
     transition: all 50ms ease-in;
 
     @media #{$tablet-up} {
+        margin: 0 8px 16px;
         flex-basis: calc(50% - 16px);
     }
 
     @media #{$desktop-up} {
-        flex-basis: calc(50% - 16px);
         flex-grow: 0;
     }
 

@@ -4,19 +4,15 @@
 
 // Settings
 @import
-    './partials/settings.colors',
-    './partials/settings.typography',
-    './partials/settings.media-queries';
+    './partials/settings.base';
 
 // Tools
 @import
     './partials/tools.mixins';
-//     './partials/tools.functions',
-
 
 // Generics
 @import
-'./partials/generic.reset';
+    './partials/generic.reset';
 
 // Vendors
 @import

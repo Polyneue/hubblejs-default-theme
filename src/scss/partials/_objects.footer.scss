@@ -2,34 +2,18 @@
 // Objects: Footer
 ////
 
+// Footer
 .footer {
-    background-repeat: repeat;
-    position: relative;
-    height: 170px;
+    height: 158px;
     padding-top: 70px;
-    background-color: $background;
 
     &__wrap {
-        padding: 16px;
-        border: 1px solid $background-accent;
+        background-color: $background;
         border-radius: 8px;
+        border: 1px solid $background-accent;
+        color: $text-secondary;
+        padding: 16px;
         position: relative;
         z-index: 2;
-        background-color: $background;
-        color: $text-secondary;
-    }
-
-    &__hubblejs {
-        color: $text-secondary;
-    } // .footer__hubblejs
-
-    &:before {
-        background-image: linear-gradient(to bottom, $background 20%, rgba($background, .5) 70%, rgba($background, .0) 100%);
-        top: 0;
-        content: '';
-        height: 100%;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
     }
 } // .hero

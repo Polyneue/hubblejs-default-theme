@@ -2,7 +2,8 @@
 // Components: Filters
 ////
 
-.projects-filter {
+// Filters
+.filter {
     display: none;
 
     @media #{$tablet-up} {
@@ -31,11 +32,11 @@
         font-size: 12px;
         padding: 3px 8px;
         transition: all 75ms linear;
-    }
 
-    &__link.is-active,
-    &__link:hover {
-        background-color: $white;
-        color: $text-link;
-    }
-} // .projects-filter
+        &.is-active,
+        &:hover {
+            background-color: $white;
+            color: $text-link;
+        }
+    } // .filter__link
+} // .filter

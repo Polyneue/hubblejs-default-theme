@@ -2,11 +2,15 @@
 // Components: Gist
 ////
 
-// Base Gist
+// Gist
 .gist {
     border: 1px solid $background-accent;
     border-radius: 5px;
     margin-bottom: 16px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     &__link {
         display: block;

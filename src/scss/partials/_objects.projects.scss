@@ -2,9 +2,9 @@
 // Objects: Projects
 ////
 
-// Base
+// Projects
 .projects {
-    background-image: linear-gradient(45deg, #{$primary}, #{$secondary});
+    background-image: linear-gradient(45deg, $primary, $secondary);
     box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, .3);
     color: $white;
     padding: 32px 0 16px;
@@ -27,7 +27,7 @@
         }
     } // .projects__list
 
-    .projects-filter {
+    .filter {
         margin-bottom: 26px;
     }
 } // .projects

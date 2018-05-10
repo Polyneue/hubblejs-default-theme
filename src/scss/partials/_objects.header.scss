@@ -2,10 +2,10 @@
 // Objects: Header
 ////
 
+// Header
 .header {
     background-color: $background;
-    border: 1px solid transparent;
-    border-color: $background-accent;
+    border: 1px solid $background-accent;
     border-radius: 0 0 5px 5px;
     border-top: 0;
     display: flex;
@@ -19,9 +19,9 @@
     }
 
     &__username {
+        color: $primary;
         flex: 1;
         font-weight: 600;
-        color: #{$primary};
     }
 
     &__nav-toggle {
@@ -71,18 +71,3 @@
         }
     } // .header.nav-is-active
 } // .header
-
-.hero {
-    background-repeat: repeat;
-    position: relative;
-
-    &:before {
-        background-image: linear-gradient(to top, $background 20%, rgba($background, .5) 70%, rgba($background, .0) 100%);
-        bottom: 0;
-        content: '';
-        height: 100%;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-    }
-} // .hero

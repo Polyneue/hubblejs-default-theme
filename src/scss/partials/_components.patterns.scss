@@ -2,9 +2,38 @@
 // Components: Patterns
 ////
 
-.hero-pattern,
-.footer-pattern {
-    background-image: hero-pattern(#{$pattern-name}, #{$pattern-fill}, #{$pattern-opacity});
-    background-size: #{$pattern-size} #{$pattern-size};
+
+// Pattern
+.pattern-bg {
+    background-image: hero-pattern($pattern-name, $pattern-fill, $pattern-opacity);
+    background-size: $pattern-size $pattern-size;
     background-repeat: repeat;
+    position: relative;
+
+    &:before {
+        @include size(100%);
+        content: '';
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+} // .pattern-bg
+
+.pattern-bg--header:before {
+    background-image: linear-gradient(
+        to top,
+        $background 20%,
+        rgba($background, .5) 70%,
+        rgba($background, .0) 100%
+    );
+}
+
+.pattern-bg--footer:before {
+    background-image: linear-gradient(
+        to bottom,
+        $background 10%,
+        rgba($background, .5) 50%,
+        rgba($background, .0) 90%,
+        rgba($background, .0) 100%
+    );
 }

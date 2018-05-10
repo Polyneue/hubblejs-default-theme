@@ -31,7 +31,7 @@ $social-brand-map: (
 
         svg {
             @include size(16px);
-            fill: #FFF;
+            fill: $white;
             left: 50%;
             margin-left: -8px;
             margin-top: -8px;

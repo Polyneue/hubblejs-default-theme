@@ -2,6 +2,7 @@
 // Objects: About
 ////
 
+// About
 .about {
     display: flex;
     flex-direction: column;
@@ -17,7 +18,7 @@
 
     &__avatar {
         border: 4px solid $background;
-        box-shadow: 0 4px 6px 0 rgba(#000, .1);
+        box-shadow: 0 4px 6px 0 rgba($black, .1);
         flex: 1;
         margin-bottom: 16px;
         width: 128px;
