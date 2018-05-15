@@ -17,7 +17,7 @@ const generateConfig = function (data) {
       },
       navigation: {},
       pattern: {
-        name: 'polka-dots',
+        name: 'polka dots',
         fill: '#EEE',
         size: '20px',
         opacity: 1.0

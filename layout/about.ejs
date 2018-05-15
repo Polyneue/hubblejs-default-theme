@@ -18,7 +18,7 @@
             <p class="about__title"><%= theme.role %></p>
 
             <%# Social Media %>
-            <% if (theme.socialMedia !== false) { %>
+            <% if (theme.social !== undefined) { %>
                 <%- include('../components/social', { social: theme.social }); %>
             <% } %>
 

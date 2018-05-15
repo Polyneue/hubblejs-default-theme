@@ -30,9 +30,7 @@ const enrichConfig = function (data) {
   }
 
   // Format the social media object
-  if (social !== undefined) {
-    data.theme.socialCSS = Object.keys(data.theme.social);
-  }
+  data.theme.socialCSS = (social) ? Object.keys(social) : 'false';
 
   // Build Date
   const date = formatDate(Date.now());
