@@ -44,7 +44,10 @@ const dynamicSass = async function (entry, variables) {
   const data = `${handleVariables(variables)}@import "${entry}";`;
   const entryPath = path.dirname(entry);
   const sassOptions = {
-    includePaths: [entryPath],
+    includePaths: [
+      entryPath,
+      path.join(__dirname, '..', 'node_modules')
+    ],
     data
   };
 
