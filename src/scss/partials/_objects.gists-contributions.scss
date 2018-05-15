@@ -19,9 +19,12 @@
 
 // Gists
 .gists {
-    flex: 2;
 
     @media #{$tablet-up} {
         margin-right: 32px;
+    }
+
+    @media #{$desktop-up} {
+        flex: 2;
     }
 } // .gists

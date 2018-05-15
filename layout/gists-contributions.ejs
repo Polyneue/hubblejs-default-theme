@@ -7,28 +7,32 @@
 %>
 <section class="gists-contributions">
     <div class="container container--flex">
-        <div class="gists">
-            <header>
-                <h2 class="gists__header f-semi">Recent Gists</h2>
-            </header>
+        <% if (gists && gists.length) { %>
+            <div class="gists">
+                <header>
+                    <h2 class="gists__header f-semi">Recent Gists</h2>
+                </header>
 
-            <ul class="gists__list">
-                <% gists.forEach(function (gist) { %>
-                    <%- include('../components/gist', { gist }); %>
-                <% }); %>
-            </ul>
-        </div>
+                <ul class="gists__list">
+                    <% gists.forEach(function (gist) { %>
+                        <%- include('../components/gist', { gist }); %>
+                    <% }); %>
+                </ul>
+            </div>
+        <% } %>
 
-        <div class="contributions">
-            <header>
-                <h2 class="contributions__header f-semi">Contributions</h2>
-            </header>
+        <% if (contributions && contributions.length) { %>
+            <div class="contributions">
+                <header>
+                    <h2 class="contributions__header f-semi">Contributions</h2>
+                </header>
 
-            <ul class="contributions__list">
-                <% contributions.forEach(function (contribution) { %>
-                    <%- include('../components/contribution', { contribution }); %>
-                <% }); %>
-            </ul>
-        </div>
+                <ul class="contributions__list">
+                    <% contributions.forEach(function (contribution) { %>
+                        <%- include('../components/contribution', { contribution }); %>
+                    <% }); %>
+                </ul>
+            </div>
+        <% } %>
     </div>
 </section>

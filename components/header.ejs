@@ -16,7 +16,7 @@
             </span>
             <nav id="js-nav" class="nav" role="navigation">
                 <% Object.keys(navigation).forEach(function (key) { %>
-                    <a href="<%= navigation[key] %>" target="_blank" class="nav__link">
+                    <a href="<%= navigation[key] %>" rel="noopener noreferrer" target="_blank" class="nav__link" title="Ed Mendoza's <%= key %>">
                         <%= key %>
                     </a>
                 <% }); %>

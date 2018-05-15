@@ -23,8 +23,10 @@
         <%# Projects %>
         <%- include('/layout/projects', { theme, projects: repositories }); %>
 
-        <%# Gists %>
-        <%- include('/layout/gists-contributions', { user, gists, contributions, utilities }); %>
+        <%# Gists and Contributions %>
+        <% if ((gists && gists.length) || (contributions && contributions.length)) { %>
+            <%- include('/layout/gists-contributions', { user, gists, contributions, utilities }); %>
+        <% } %>
 
         <%# Footer %>
         <%- include('/layout/footer', { user, date }); %>
