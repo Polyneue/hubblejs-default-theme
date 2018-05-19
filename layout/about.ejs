@@ -5,17 +5,27 @@
     @param { Object } user and theme data
 %>
 <div class="container">
-    <section class="about">
+    <section class="about" itemscope itemtype="http://schema.org/Person">
         <div class="about__avatar">
-            <img src="<%= user.avatarUrl %>" alt="<%= user.name %>">
+            <img src="<%= user.avatarUrl %>" itemprop="image" alt="<%= user.name %>">
         </div>
 
         <div class="about__bio">
-            <h1 class="about__name">
+            <h1 class="about__name" itemprop="name">
                 <span><%= user.name.split(' ')[0] %></span>
                 <span class="f-semi"><%= user.name.split(' ')[1] %></span>
             </h1>
-            <p class="about__title"><%= theme.role %></p>
+            <p class="about__title">
+                <span itemprop="jobTitle"><%= theme.title %></span>
+                <% if (user.company) { %>
+                    at
+                    <span itemprop="worksFor"><%= user.company %></span>
+                <% } %>
+                <% if (user.location) { %>
+                    in
+                    <span itemprop="workLocation"><%= user.location %></span>
+                <% } %>
+            </p>
 
             <%# Social Media %>
             <% if (theme.social !== undefined) { %>
@@ -24,7 +34,7 @@
 
             <%# Description %>
             <% if (theme.description !== false) { %>
-                <p class="about__description">
+                <p class="about__description" itemprop="description">
                     <%= theme.description %>
                 </p>
             <% } %>
@@ -32,7 +42,12 @@
             <%# Website %>
             <% if (user.websiteUrl) { %>
                 <p class="about__url">
-                    <a href="http://<%= user.websiteUrl %>" class="f-semi" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="http://<%= user.websiteUrl %>"
+                        class="f-semi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <%= user.websiteUrl %>
                     </a>
                 </p>

@@ -4,12 +4,23 @@
     Render Project Card
     @param { Object } project data
 %>
-<li class="project js-filter-project" data-language="<%= project.primaryLanguage.name %>">
-    <a href="<%= project.url %>" class="project__link" target="_blank" rel="noopener noreferrer">
-        <p class="project__name"><%= project.name %></p>
+<li
+    class="project js-filter-project"
+    data-language="<%= project.primaryLanguage.name %>"
+    itemscope
+    itemtype="http://schema.org/Code"
+>
+    <a
+        href="<%= project.url %>"
+        class="project__link"
+        target="_blank"
+        rel="noopener noreferrer"
+        itemprop="url"
+    >
+        <p class="project__name" itemprop="name"><%= project.name %></p>
 
         <% if (project.description) { %>
-            <p class="project__description"><%= project.description %></p>
+            <p class="project__description" itemprop="description"><%= project.description %></p>
         <% } %>
 
         <div class="project__footer">
