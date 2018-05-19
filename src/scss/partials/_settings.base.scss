@@ -34,8 +34,8 @@ $font-primary: 'Montserrat', 'Helvetica', sans-serif;
 // Patterns
 // ====================
 $pattern-name:              #{$pattern-name};
-$pattern-fill:              #{$pattern-fill};
-$pattern-opacity:           #{$pattern-opacity};
+$pattern-fill:              $background-accent;
+$pattern-opacity:           1;
 $pattern-size:              #{$pattern-size};
 
 

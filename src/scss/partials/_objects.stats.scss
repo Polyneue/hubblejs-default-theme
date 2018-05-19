@@ -44,7 +44,8 @@
         transition: all 100ms linear;
         width: 100%;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: lighten($background-accent, 3%);
         }
 

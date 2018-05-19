@@ -30,6 +30,11 @@ $social-brand-map: (
             margin-right: 8px;
             position: relative;
 
+            a {
+                @include size(28px);
+                display: inline-block;
+            }
+
             svg {
                 @include size(16px);
                 fill: $white;
@@ -47,8 +52,10 @@ $social-brand-map: (
         .#{$account} {
             background-color: map-get($social-brand-map, $account);
 
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: darken(map-get($social-brand-map, $account), 10%);
+                transition: all 75ms linear;
             }
         } // .brand-account
     } // @each

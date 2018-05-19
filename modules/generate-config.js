@@ -11,6 +11,11 @@ const generateConfig = function (data) {
         favicon: '' // TODO: Figure out how to load in defaults
       },
       type: 'light',
+      display: {
+        repositories: 9,
+        gists: 8,
+        contributions: 8
+      },
       palette: {
         primary: '#F94878',
         secondary: '#753AA8'
@@ -18,9 +23,7 @@ const generateConfig = function (data) {
       navigation: {},
       pattern: {
         name: 'polka dots',
-        fill: '#EEE',
-        size: '20px',
-        opacity: 1.0
+        size: '20px'
       }
     }
   };

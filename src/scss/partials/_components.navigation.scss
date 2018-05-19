@@ -30,7 +30,8 @@
             padding: 0;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: darken($text-secondary, 10%);
         }
 

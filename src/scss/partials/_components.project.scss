@@ -32,8 +32,9 @@
         }
     } // .project.is-faded
 
-    &:hover {
-        box-shadow: 0 0 0 0;
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 rgba(0, 0, 0, .1);
     }
 
     &__link {

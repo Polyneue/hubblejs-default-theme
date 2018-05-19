@@ -28,25 +28,6 @@ const formatDescription = function (user, role) {
 };
 
 /**
- * Create the default description
- * @param {Object} user - user data from Github
- * @param {String} role - role for the user
- * @return {String} formatted role
- */
-const formatRole = function (user, role) {
-  let description = `${role}`;
-
-  switch (true) {
-    case user.company !== undefined:
-      description += ` at ${user.company}`;
-    case user.location !== undefined:
-      description += ` in ${user.location}`;
-    default:
-      return description;
-  }
-};
-
-/**
  * Date to be parsed
  * @param {String} date - to be parsed
  * @return {String} formatted date time
@@ -66,6 +47,5 @@ const formatDate = function (date) {
 
 module.exports = {
   formatDescription,
-  formatRole,
   formatDate
 };

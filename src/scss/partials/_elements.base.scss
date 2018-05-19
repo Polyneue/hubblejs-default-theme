@@ -65,8 +65,13 @@ a {
         color: $text-link;
     }
 
+    &:focus,
     &:hover {
         color: darken($text-link, 10%);
+    }
+
+    &:focus {
+        outline: $primary thin dotted;
     }
 } // a
 

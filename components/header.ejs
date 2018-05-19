@@ -6,7 +6,14 @@
 %>
 <div class="container">
     <header id="js-header" class="header" role="banner">
-        <h1 class="header__username">@<%= user.username %></h1>
+        <a
+            href="<%= user.url %>"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Go to <%= user.username %>'s Github Page"
+        >
+            <h1 class="header__username">@<%= user.username %></h1>
+        </a>
 
         <%# Navigation %>
         <% if (Object.keys(navigation).length) { %>
