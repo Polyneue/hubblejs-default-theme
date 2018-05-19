@@ -5,14 +5,18 @@
     @param { Object } social media { name:url }
 %>
 <div class="social-media">
-    <% Object.keys(social).forEach(function (key) { %>
-        <a
-            href="<%= social[key] %>"
-            class="social-media__link <%= key %>"
-            title="<%= key %>"
-            target="_blank"
-        >
-            <%- include(`../icons/${key}.svg`); %>
-        </a>
-    <% }); %>
+    <ul>
+        <% Object.keys(social).forEach(function (key) { %>
+            <li class="social-media__link <%= key %>">
+                <a
+                    href="<%= social[key] %>"
+                    title="<%= user.name %>'s on <%= key %>"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    <%- include(`../icons/${key}.svg`); %>
+                </a>
+            </li>
+        <% }); %>
+    </ul>
 </div>

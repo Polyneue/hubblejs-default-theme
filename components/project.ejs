@@ -5,22 +5,25 @@
     @param { Object } project data
 %>
 <li class="project js-filter-project" data-language="<%= project.primaryLanguage.name %>">
-    <a href="<%= project.url %>" class="project__link" target="_blank">
-        <h3 class="project__name"><%= project.name %></h3>
-        <p class="project__description"><%= project.description %></p>
+    <a href="<%= project.url %>" class="project__link" target="_blank" rel="noopener noreferrer">
+        <p class="project__name"><%= project.name %></p>
+
+        <% if (project.description) { %>
+            <p class="project__description"><%= project.description %></p>
+        <% } %>
 
         <div class="project__footer">
-            <div class="project__language">
-                <span class="project__language-color" style="background-color: <%= project.primaryLanguage.color %>"></span>
+            <p class="project__language">
+                <span class="project__language-color" style="background-color: <%= project.primaryLanguage.color %>" aria-hidden="true"></span>
                 <span class="project__language-name"><%= project.primaryLanguage.name %></span>
-            </div>
+            </p>
             <% if (project.stargazers.totalCount !== 0) { %>
-                <div class="project__star">
+                <p class="project__star">
                     <span class="project__star-count"><%= project.stargazers.totalCount %></span>
                     <span class="project__star-icon">
                         <%- include('../icons/star.svg'); %>
                     </span>
-                </div>
+                </p>
             <% } %>
         </div>
     </a>

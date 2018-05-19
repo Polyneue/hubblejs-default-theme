@@ -15,7 +15,7 @@
 
                 <ul class="gists__list">
                     <% gists.forEach(function (gist) { %>
-                        <%- include('../components/gist', { gist }); %>
+                        <%- include('../components/gist', { gist, user }); %>
                     <% }); %>
                 </ul>
             </div>
@@ -29,7 +29,7 @@
 
                 <ul class="contributions__list">
                     <% contributions.forEach(function (contribution) { %>
-                        <%- include('../components/contribution', { contribution }); %>
+                        <%- include('../components/contribution', { contribution, user }); %>
                     <% }); %>
                 </ul>
             </div>

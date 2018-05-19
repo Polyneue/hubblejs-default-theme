@@ -12,6 +12,8 @@
                     href="https://github.com/<%= user.username %>?tab=repositories"
                     class="stats-list__link"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    title="<%= user.name %>'s Repositories"
                 >
                     <span class="stats-list__link-number">
                         <%= user.repositories.totalCount %>
@@ -26,6 +28,8 @@
                         href="https://gist.github.com/<%= user.username %>"
                         class="stats-list__link"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        title="<%= user.name %>'s Gists"
                     >
                         <span class="stats-list__link-number">
                             <%= user.gists.totalCount %>
@@ -40,7 +44,9 @@
                     <a
                         href="https://github.com/<%= user.username %>?tab=followers"
                         class="stats-list__link"
+                        rel="noopener noreferrer"
                         target="_blank"
+                        title="<%= user.name %>'s Followers"
                     >
                         <span class="stats-list__link-number">
                             <%= user.followers.totalCount %>

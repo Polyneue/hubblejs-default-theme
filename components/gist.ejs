@@ -5,10 +5,14 @@
     @param { Object } gist data
 %>
 <li class="gist">
-    <a href="https://gist.github.com/<%= user.username %>/<%= gist.name %>" class="gist__link" target="_blank">
-        <span class="gist__description f-semi">
-            <%= gist.description %>
-        </span>
+    <a
+        href="https://gist.github.com/<%= user.username %>/<%= gist.name %>"
+        class="gist__link"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="View <%= user.name %>'s Gist"
+    >
+        <p class="gist__description f-semi"><%= gist.description %></p>
         <span class="gist__date"><%= utilities.formatDate(gist.pushedAt) %></span>
     </a>
 </li>
