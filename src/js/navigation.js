@@ -4,9 +4,11 @@
   const navToggle = document.getElementById('js-nav-toggle');
   const header = document.getElementById('js-header');
 
-  navToggle.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    header.classList.toggle(isActive);
-    navToggle.classList.toggle(isActive);
-  });
+  if (navToggle !== null) {
+    navToggle.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      header.classList.toggle(isActive);
+      navToggle.classList.toggle(isActive);
+    });
+  }
 }());
