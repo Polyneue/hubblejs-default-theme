@@ -6,7 +6,7 @@
 // Pattern
 .pattern-bg {
     background-image: hero-pattern($pattern-name, $pattern-fill, $pattern-opacity);
-    background-size: $pattern-size $pattern-size;
+    background-size: $pattern-size;
     background-repeat: repeat;
     position: relative;
 
