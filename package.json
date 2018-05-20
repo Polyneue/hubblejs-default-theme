@@ -1,6 +1,6 @@
 {
   "name": "hubblejs-default-theme",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Default theme for HubbleJS Github templating engine",
   "main": "index.js",
   "scripts": {
