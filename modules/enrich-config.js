@@ -6,20 +6,24 @@ const { formatDescription, formatDate } = require('./utilities');
  * @return {Object} data with enriched props
  */
 const enrichConfig = function (data) {
-  const { user, repositories } = data;
+  const { user } = data;
   const { title, social, display } = data.theme;
-
-  // Pull out filter options
-  data.theme.languages = repositories
-    .map(repo => repo.primaryLanguage.name)
-    .filter(function (language, index, arr) {
-      return arr.indexOf(language) === index;
-    });
 
   // Grab the correct number of repositories to display
   if (data.repositories.length > display.repositories) {
     data.repositories = data.repositories.splice(0, display.repositories);
   }
+
+  // Pull out filter options
+  data.theme.languages = data.repositories
+    .map(function (repo) {
+      if (repo.primaryLanguage !== null) return repo.primaryLanguage.name;
+      return 'none';
+    })
+    .filter(function (language, index, arr) {
+      return arr.indexOf(language) === index;
+    })
+    .filter(language => language !== 'none');
 
   // Grab the correct number of gists to display
   if (data.gists.length > display.gists) {
