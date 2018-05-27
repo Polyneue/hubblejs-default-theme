@@ -11,14 +11,12 @@ const src = path.join(__dirname, '..', 'src', 'js');
  * @return {String} contents of a file
  */
 const readFile = function (filePath) {
-  return new Promise(async function (resolve, reject) {
-    try {
-      const content = await fs.readFileSync(`${src}/${filePath}`);
-      resolve(content);
-    } catch (err) {
-      reject(err);
-    }
-  });
+  try {
+    const content = fs.readFileSync(`${src}/${filePath}`);
+    return content;
+  } catch (err) {
+    throw err;
+  }
 };
 
 /**
@@ -28,7 +26,7 @@ const readFile = function (filePath) {
  */
 const generateJS = async function () {
   try {
-    const files = await fs.readdirSync(src);
+    const files = fs.readdirSync(src);
     const fileData = await Promise.all(files.map(readFile));
 
     let output = fileData.join('');

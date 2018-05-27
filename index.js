@@ -15,28 +15,26 @@ const renderTemplate = async function renderTemplate(data) {
   const srcFile = path.join(__dirname, '.', 'index.ejs');
   const srcPath = path.dirname(srcFile);
 
-  return new Promise(async function (resolve, reject) {
-    try {
-      const src = await fs.readFileSync(srcFile, 'utf8');
-      const template = ejs.compile(src, { root: srcPath });
+  try {
+    const src = await fs.readFileSync(srcFile, 'utf8');
+    const template = ejs.compile(src, { root: srcPath });
 
-      // Merge the original data with the themes defaults
-      data = generateConfig(data);
+    // Merge the original data with the themes defaults
+    data = generateConfig(data);
 
-      // Enrich some theme specific options
-      data = enrichConfig(data);
+    // Enrich some theme specific options
+    data = enrichConfig(data);
 
-      // Generate CSS/JS to attach to the data object
-      data.css = await generateCSS(data);
-      data.js = await generateJS(data);
+    // Generate CSS/JS to attach to the data object
+    data.css = await generateCSS(data);
+    data.js = await generateJS(data);
 
-      // Render the template
-      const render = template(data);
-      resolve(render);
-    } catch (err) {
-      reject(err);
-    }
-  });
+    // Render the template
+    const render = template(data);
+    return render;
+  } catch (err) {
+    throw err;
+  }
 };
 
 module.exports = renderTemplate;

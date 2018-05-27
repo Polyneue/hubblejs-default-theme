@@ -74,8 +74,6 @@ const generateCSS = async function (data) {
     secondary,
     'social-media': socialCSS,
     'pattern-name': pattern.name,
-    'pattern-fill': pattern.fill,
-    'pattern-opacity': pattern.opacity,
     'pattern-size': pattern.size
   };
 
