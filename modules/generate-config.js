@@ -1,14 +1,15 @@
 const merge = require('deepmerge');
+const path = require('path');
 
 const generateConfig = function (data) {
-  const config = {
+  const options = {
     theme: {
       title: 'Developer',
       description: '',
       meta: {
         description: '',
         title: '',
-        favicon: '' // TODO: Figure out how to load in defaults
+        favicon: path.join(__dirname, '..', 'src', 'favicon.ico')
       },
       type: 'light',
       display: {
@@ -18,17 +19,36 @@ const generateConfig = function (data) {
       },
       palette: {
         primary: '#F94878',
-        secondary: '#753AA8'
+        secondary: '#753AA8',
+        textPrimary: '#000F3E',
+        background: '#FEFEFE',
+        backgroundRGB: '254, 254, 254',
+        backgroundAccent: '#EFEFF4',
+        backgroundAccentLight: '#F8F8FA'
       },
       navigation: {},
       pattern: {
-        name: 'polka dots',
-        size: '20px'
+        name: 'morphing diamonds',
+        size: '100px'
       }
     }
   };
 
-  return merge(config, data);
+  // Merge configs together
+  const config = merge(options, data);
+
+  // Merge dark options if theme dark is specified
+  if (config.theme.type === 'dark') {
+    config.theme.palette = merge(config.theme.palette, {
+      textPrimary: '#EEEEEE',
+      background: '#1A1A1A',
+      backgroundRGB: '26, 26, 26',
+      backgroundAccent: '#3B3B3B',
+      backgroundAccentLight: '#434343'
+    });
+  }
+
+  return config;
 };
 
 module.exports = generateConfig;

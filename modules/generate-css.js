@@ -40,8 +40,8 @@ const handleVariables = function (obj) {
  * @param {String} entry - entry scss project file
  * @param {Object} variables - dynamic vars for sass
  */
-const dynamicSass = async function (entry, variables) {
-  const data = `${handleVariables(variables)}@import "${entry}";`;
+const dynamicSass = async function (entry) {
+  const data = `@import "${entry}";`;
   const entryPath = path.dirname(entry);
   const sassOptions = {
     includePaths: [
@@ -65,20 +65,8 @@ const dynamicSass = async function (entry, variables) {
  * @return {String} css output
  */
 const generateCSS = async function (data) {
-  const { type, socialCSS, pattern } = data.theme;
-  const { primary, secondary } = data.theme.palette;
-
-  const variables = {
-    type,
-    primary,
-    secondary,
-    'social-media': socialCSS,
-    'pattern-name': pattern.name,
-    'pattern-size': pattern.size
-  };
-
   try {
-    const css = await dynamicSass(src, variables);
+    const css = await dynamicSass(src);
     const output = await postcss(plugins).process(css, { from: undefined });
     return output;
   } catch (err) {

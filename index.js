@@ -9,14 +9,16 @@ const generateJS = require('./modules/generate-js');
 /**
  * Parse data and render the template to HTML
  * @param {Object} data - user data to be rendered
+ * @param {String} output - location to write files to
  * @returns {String} rendered HTML
  */
-const renderTemplate = async function renderTemplate(data) {
+const renderTemplate = async function renderTemplate(data, output) {
   const srcFile = path.join(__dirname, '.', 'index.ejs');
   const srcPath = path.dirname(srcFile);
+  const dir = path.dirname(output);
 
   try {
-    const src = await fs.readFileSync(srcFile, 'utf8');
+    const src = fs.readFileSync(srcFile, 'utf8');
     const template = ejs.compile(src, { root: srcPath });
 
     // Merge the original data with the themes defaults
@@ -28,6 +30,9 @@ const renderTemplate = async function renderTemplate(data) {
     // Generate CSS/JS to attach to the data object
     data.css = await generateCSS(data);
     data.js = await generateJS(data);
+
+    // Handle Favicon
+    fs.copyFileSync(data.theme.meta.favicon, `${dir}/favicon.ico`);
 
     // Render the template
     const render = template(data);

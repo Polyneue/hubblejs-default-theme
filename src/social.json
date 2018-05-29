@@ -1,0 +1,50 @@
+{
+  "behance": {
+    "primary": "#0057FF",
+    "hover": "#1A71FF"
+  },
+  "bitbucket": {
+    "primary": "#0057D8",
+    "hover": "#1A71F2"
+  },
+  "codepen": {
+    "primary": "#111111",
+    "hover": "#2B2B2B"
+  },
+  "dribbble": {
+    "primary": "#DF3E7B",
+    "hover": "#F95895"
+  },
+  "facebook": {
+    "primary": "#29487D",
+    "hover": "#436297"
+  },
+  "github": {
+    "primary": "#24292E",
+    "hover": "#3E4348"
+  },
+  "instagram": {
+    "primary": "#3897F0",
+    "hover": "#52B1FF"
+  },
+  "linkedin": {
+    "primary": "#0073B1",
+    "hover": "#1A8DCB"
+  },
+  "medium": {
+    "primary": "#029E74",
+    "hover": "#1CB88E"
+  },
+  "npm": {
+    "primary": "#C12127",
+    "hover": "#DB3B41"
+  },
+  "stackoverflow": {
+    "primary": "#F48024",
+    "hover": "#FF9A3E"
+  },
+  "twitter": {
+    "primary": "#1DA1F2",
+    "hover": "#1DA1F2"
+  }
+}

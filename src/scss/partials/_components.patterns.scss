@@ -5,8 +5,6 @@
 
 // Pattern
 .pattern-bg {
-    background-image: hero-pattern($pattern-name, $pattern-fill, $pattern-opacity);
-    background-size: $pattern-size;
     background-repeat: repeat;
     position: relative;
 
@@ -22,18 +20,18 @@
 .pattern-bg--header:before {
     background-image: linear-gradient(
         to top,
-        $background 20%,
-        rgba($background, .5) 70%,
-        rgba($background, .0) 100%
+        RGB($background-rgb) 20%,
+        rgba($background-rgb, .5) 70%,
+        rgba($background-rgb, .0) 100%
     );
 }
 
 .pattern-bg--footer:before {
     background-image: linear-gradient(
         to bottom,
-        $background 10%,
-        rgba($background, .5) 80%,
-        rgba($background, .0) 95%,
-        rgba($background, .0) 100%
+        RGB($background-rgb) 10%,
+        rgba($background-rgb, .5) 80%,
+        rgba($background-rgb, .0) 95%,
+        rgba($background-rgb, .0) 100%
     );
 }

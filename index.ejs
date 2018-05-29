@@ -2,7 +2,10 @@
 <html lang="en">
     <head>
         <%# Meta %>
-        <%- include('/base/meta', { meta: theme.meta, user }); %>
+        <%- include('/base/meta', { meta: theme.meta }); %>
+
+        <%# Styles %>
+        <%- include('/base/styles', { theme, utilities }); %>
 
         <%# Styles %>
         <style><%- css %></style>

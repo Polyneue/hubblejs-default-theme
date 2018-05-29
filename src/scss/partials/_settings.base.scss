@@ -6,37 +6,24 @@
 // ====================
 $white:                     #FFFFFF;
 $black:                     #000000;
-$primary:                   #{$primary};
-$secondary:                 #{$secondary};
+$primary:                   var(--primary);
+$secondary:                 var(--secondary);
 
 // Text
-$text-primary:              #000F3E !default;
+$text-primary:              var(--text-primary);
 $text-secondary:            #A5A5A5 !default;
 $text-link:                 #64B7FF !default;
 
 // Background
-$background:                #FEFEFE !default;
-$background-accent:         #EFEFF4 !default;
-
-// Background
-@if ($type == 'dark') {
-    $text-primary:          #EEEEEE;
-    $background:            #1A1A1A;
-    $background-accent:     #3B3B3B;
-}
+$background:                var(--background);
+$background-rgb:            var(--background-rgb);
+$background-accent:         var(--background-accent);
+$background-accent-light:   var(--background-accent-light);
 
 
 // Typography
 // ====================
 $font-primary: 'Montserrat', 'Helvetica', sans-serif;
-
-
-// Patterns
-// ====================
-$pattern-name:              #{$pattern-name};
-$pattern-fill:              $background-accent;
-$pattern-opacity:           1;
-$pattern-size:              #{$pattern-size};
 
 
 // Media Queries

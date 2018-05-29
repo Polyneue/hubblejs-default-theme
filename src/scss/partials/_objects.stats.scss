@@ -46,7 +46,7 @@
 
         &:hover,
         &:focus {
-            background-color: lighten($background-accent, 3%);
+            background-color: $background-accent-light;
         }
 
         @media #{$tablet-up} {

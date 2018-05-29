@@ -1,0 +1,33 @@
+<%#
+    Styles
+    Theme: Hubble JS Default
+    @param { Object } theme, utilities
+%>
+<style>
+    <%# Theme Options %>
+    :root {
+        --primary: <%- theme.palette.primary %>;
+        --secondary: <%- theme.palette.secondary %>;
+        --text-primary: <%- theme.palette.textPrimary %>;
+        --background: <%- theme.palette.background %>;
+        --background-rgb: <%- theme.palette.backgroundRGB %>;
+        --background-accent: <%- theme.palette.backgroundAccent %>;
+        --background-accent-light: <%- theme.palette.backgroundAccentLight %>;
+    }
+
+    <%# Theme Pattern %>
+    .pattern-bg {
+        background-image: url("<%- utilities.getPattern(theme.pattern.name, theme.palette.backgroundAccent) %>");
+        background-size: <%- theme.pattern.size %>;
+    }
+
+    <%# Theme Social %>
+    <% Object.keys(theme.social).forEach(function (key) { %>
+        .<%= key %> {
+            background-color: <%= utilities.getSocial(key).primary %>;
+        }
+        .<%= key %>:hover {
+            background-color: <%= utilities.getSocial(key).hover %>;
+        }
+    <% }); %>
+</style>

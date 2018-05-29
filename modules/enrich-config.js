@@ -1,4 +1,4 @@
-const { formatDescription, formatDate } = require('./utilities');
+const { formatDescription, formatDate, getSocial, getPattern } = require('./utilities');
 
 /**
  * Format the config for working within the theme
@@ -7,7 +7,7 @@ const { formatDescription, formatDate } = require('./utilities');
  */
 const enrichConfig = function (data) {
   const { user } = data;
-  const { title, social, display } = data.theme;
+  const { title, display } = data.theme;
 
   // Grab the correct number of repositories to display
   if (data.repositories.length > display.repositories) {
@@ -45,16 +45,15 @@ const enrichConfig = function (data) {
     data.theme.meta.description = formatDescription(user, title);
   }
 
-  // Format the social media object
-  data.theme.socialCSS = (social) ? Object.keys(social) : 'false';
-
   // Build Date
   const date = formatDate(Date.now());
   data.date = date.split(',')[1].trim();
 
   // Add the formatDate method
   data.utilities = {
-    formatDate
+    formatDate,
+    getPattern,
+    getSocial
   };
 
   return data;

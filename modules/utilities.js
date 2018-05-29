@@ -1,4 +1,31 @@
 /* eslint-disable no-fallthrough */
+const patterns = require('../src/patterns.json');
+const brands = require('../src/social.json');
+
+/**
+ * Get brand object for social media
+ * @param {String} name - name of brand to get
+ * @return {Object} brand
+ */
+const getSocial = function (name) {
+  return brands[name];
+};
+
+/**
+ * Get SVG from patterns map
+ * @param {String} name - pattern name
+ * @param {String} color - color for svg path
+ * @return {String} pattern
+ */
+const getPattern = function (name, color) {
+  const pattern = name.toLowerCase();
+  let svg = patterns[pattern];
+  const hex = color.replace('#', '%23');
+
+  svg = svg.replace("fill='black'", `fill='${hex}'`);
+
+  return svg;
+};
 
 /**
  * Create the default description
@@ -47,5 +74,7 @@ const formatDate = function (date) {
 
 module.exports = {
   formatDescription,
-  formatDate
+  formatDate,
+  getSocial,
+  getPattern
 };
