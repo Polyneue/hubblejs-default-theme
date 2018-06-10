@@ -49,6 +49,8 @@ const enrichConfig = function (data) {
   const date = formatDate(Date.now());
   data.date = date.split(',')[1].trim();
 
+  data.pattern = getPattern(data.theme.pattern.name, data.theme.palette.backgroundAccent);
+
   // Add the formatDate method
   data.utilities = {
     formatDate,

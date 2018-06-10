@@ -9,25 +9,29 @@
         --primary: <%- theme.palette.primary %>;
         --secondary: <%- theme.palette.secondary %>;
         --text-primary: <%- theme.palette.textPrimary %>;
-        --background: <%- theme.palette.background %>;
-        --background-rgb: <%- theme.palette.backgroundRGB %>;
-        --background-accent: <%- theme.palette.backgroundAccent %>;
-        --background-accent-light: <%- theme.palette.backgroundAccentLight %>;
+        --bg: <%- theme.palette.background %>;
+        --bg-rgb: <%- theme.palette.backgroundRGB %>;
+        --bg-accent: <%- theme.palette.backgroundAccent %>;
+        --bg-accent-light: <%- theme.palette.backgroundAccentLight %>;
     }
 
     <%# Theme Pattern %>
     .pattern-bg {
-        background-image: url("<%- utilities.getPattern(theme.pattern.name, theme.palette.backgroundAccent) %>");
         background-size: <%- theme.pattern.size %>;
     }
 
     <%# Theme Social %>
-    <% Object.keys(theme.social).forEach(function (key) { %>
-        .<%= key %> {
-            background-color: <%= utilities.getSocial(key).primary %>;
-        }
-        .<%= key %>:hover {
-            background-color: <%= utilities.getSocial(key).hover %>;
-        }
-    <% }); %>
+    <% if (theme.social !== undefined) { %>
+        <% Object.keys(theme.social).forEach(function (key) { %>
+            .<%= key %> {
+                background-color: <%= utilities.getSocial(key).primary %>;
+            }
+            .<%= key %>:hover {
+                background-color: <%= utilities.getSocial(key).hover %>;
+            }
+        <% }); %>
+    <% } %>
 </style>
+
+<link rel="stylesheet" href="assets/project.min.css">
+<link rel="preload" as="style" href="assets/deferred.min.css"/>

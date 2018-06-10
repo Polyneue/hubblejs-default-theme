@@ -6,9 +6,6 @@
 
         <%# Styles %>
         <%- include('/base/styles', { theme, utilities }); %>
-
-        <%# Styles %>
-        <style><%- css %></style>
     </head>
 
     <body class="is-<%= theme.type %>">
@@ -34,7 +31,12 @@
         <%# Footer %>
         <%- include('/layout/footer', { user, date }); %>
 
+        <%# Deferred CSS %>
+        <noscript id="deferred-styles">
+            <link rel="stylesheet" href="assets/deferred.min.css"/>
+        </noscript>
+
         <%# Scripts %>
-        <script type="text/javascript"><%- js %></script>
+        <script type="text/javascript" src="assets/project.min.js"></script>
     </body>
 </html>

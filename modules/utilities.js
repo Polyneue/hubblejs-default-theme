@@ -20,9 +20,7 @@ const getSocial = function (name) {
 const getPattern = function (name, color) {
   const pattern = name.toLowerCase();
   let svg = patterns[pattern];
-  const hex = color.replace('#', '%23');
-
-  svg = svg.replace("fill='black'", `fill='${hex}'`);
+  svg = svg.replace("fill='#000'", `fill='${color}'`);
 
   return svg;
 };
