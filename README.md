@@ -33,73 +33,80 @@ hubble.generate();
 
 The HubbleJS default theme has a number of configurable options to make the end results unique for each generated site. All theme configuration properties are optional.
 
-### `theme`
-
-* `title` String - Professional title. Default: "Developer".
-* `description` String - Bio content. Default: "{user} is a {title} in {location} at {company}".
-* `meta` Object - HTML meta data
-    * `description` String - the page description meta tag. Default: `theme.description`.
-    * `title` String - title tag text. Default: "{user}'s Development Portfolio"
-    * `favicon` String - path to custom favicon file. Default is HubbleJS favicon.
-* `navigation` Object - Navigation definitions, each key will be displayed in the navigation bar and the value will be the url associated with that key.
-    * **EX:** `Blog: 'my-blog.com'`
-* `type` String - Choose between `dark` or `light` mode. Default: `light`.
-* `palette` Object - Color definitions
-    * `primary` String - Color in hex format. Default is `#F94878`.
-    * `secondary` String - Color in hex format. Default is `#753AA8`.
-* `pattern` Object - Pattern definitions
-    * `name` String - The name of the pattern from [Hero Patterns](http://www.heropatterns.com/). Default: "morphing diamonds".
-    * `size` String - Pattern background size. Default: `100px`
-* `social` Object - Social media definitions
-    * `behance` String - url
-    * `bitbucket` String - url
-    * `codepen` String - url
-    * `dribbble` String - url
-    * `facebook` String - url
-    * `github` String - url
-    * `instagram` String - url
-    * `linkedin` String - url
-    * `medium` String - url
-    * `npm` String - url
-    * `stackoverflow` String - url
-    * `twitter` String - url
-
-### Example
-
-An example of a HubbleJS instance with a theme configuration.
-
 ```javascript
 const hubble = new Hubble({
-  username: 'GH_USER_NAME',
-  token: 'GH_ACCESS_TOKEN',
-  theme: {
-    meta: {
-      title: 'My New HubbleJS Site'
-    },
-    type: 'dark',
-    palette: {
-      primary: '#3498db',
-      secondary: '#2c3e50'
-    },
-    navigation: {
-      blog: "https://www.myexample.com/blog"
-    },
-    pattern: {
-      name: 'dominos',
-      scale: '50%'
-    },
-    socialMedia: {
-      behance: 'https://behance.com/myUser'
-    }
+  
+  // Role title for presentation
+  title: 'Developer',
+
+  // Bio content displayed in the about section
+  // Default: '{ user } is a { title } in { location } at  { company }'
+  description: 'My HubbleJS description',
+
+  // HTML Meta data
+  meta: {
+
+    // The page description meta tag
+    // Default: same as the description property above
+    description: 'My meta description',
+
+    // Title tag text,
+    // Default: '{ user }\'s Development Portfolio'
+    title: 'John Smith\'s Development Portfolio',
+
+    // Path to custom favicon file,
+    // Default: HubbleJS favicon
+    favicon: './path/to/my/favicon.ico'
+  },
+
+  // Navigation definitions
+  // Each key is displayed in the navigation with the value as the url
+  navigation: {
+    Blog: 'www.myblog.com'
+  },
+
+  // Light or Dark mode selection
+  // Default: light
+  type: 'light',
+
+  // Color definitions for the theme in HEX
+  palette: {
+    primary: '#F94878',
+    secondary: '#753AA8'
+  },
+
+  // Pattern Definitions
+  pattern: {
+
+    // Name of the pattern from heropatterns.com
+    name: 'morphing diamonds',
+
+    // Size of the background pattern
+    size: '100px'
+  },
+
+  // Social media definitions, value is the URL
+  social: {
+    behance: '',
+    bitbucket: '',
+    codepen: '',
+    dribbble: '',
+    facebook: '',
+    github: '',
+    instagram: '',
+    linkedin: '',
+    medium: '',
+    npm: '',
+    stackoverflow: '',
+    twitter: ''
   }
 });
-
 ```
 
 ## Versioning
 
-The HubbleJS default theme uses [SemVer](http://semver.org/) for versioning. For available versions, see the [tags for this repository](/tags).
+The HubbleJS default theme uses [SemVer](http://semver.org/) for versioning. For available versions, see the [tags for this repository](https://github.com/Polyneue/hubblejs-default-theme/releases).
 
 ## Copyright and License
 
-Code copyright 2018 Ed Mendoza. Code released under the [MIT license](blob/master/LICENSE)
+Code copyright 2018 Ed Mendoza. Code released under the [MIT license](https://github.com/Polyneue/hubblejs-default-theme/blob/master/LICENSE)
