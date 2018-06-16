@@ -1,4 +1,4 @@
-# HubbleJS Default Theme
+![Hero Patterns SCSS Cover](https://raw.githubusercontent.com/Polyneue/hubblejs-default-theme/master/docs/hubblejs-header-dark.jpg)
 
 ## Introduction
 This is the default theme for [HubbleJS](https://github.com/Polyneue/hubblejs), the developer portfolio powered by Github. This theme makes it easy to get an optimized and easily customizable portfolio site up in minutes.
