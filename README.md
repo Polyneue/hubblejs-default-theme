@@ -35,70 +35,78 @@ The HubbleJS default theme has a number of configurable options to make the end 
 
 ```javascript
 const hubble = new Hubble({
+  username: 'GITHUB_USERNAME',
+  token: 'GITHUB_TOKEN',
+
+  // Theme definitions
+  theme: {
+    // Role title for presentation
+    title: 'Developer',
   
-  // Role title for presentation
-  title: 'Developer',
+    // Bio content displayed in the about section
+    // Default: '{ user } is a { title } in { location } at  { company }'
+    description: 'My HubbleJS description',
+  
+    // HTML Meta data
+    meta: {
+  
+      // The page description meta tag
+      // Default: same as the description property above
+      description: 'My meta description',
+  
+      // Title tag text,
+      // Default: '{ user }\'s Development Portfolio'
+      title: 'John Smith\'s Development Portfolio',
+  
+      // Path to custom favicon file,
+      // Default: HubbleJS favicon
+      favicon: './path/to/my/favicon.ico',
 
-  // Bio content displayed in the about section
-  // Default: '{ user } is a { title } in { location } at  { company }'
-  description: 'My HubbleJS description',
-
-  // HTML Meta data
-  meta: {
-
-    // The page description meta tag
-    // Default: same as the description property above
-    description: 'My meta description',
-
-    // Title tag text,
-    // Default: '{ user }\'s Development Portfolio'
-    title: 'John Smith\'s Development Portfolio',
-
-    // Path to custom favicon file,
-    // Default: HubbleJS favicon
-    favicon: './path/to/my/favicon.ico'
-  },
-
-  // Navigation definitions
-  // Each key is displayed in the navigation with the value as the url
-  navigation: {
-    Blog: 'www.myblog.com'
-  },
-
-  // Light or Dark mode selection
-  // Default: light
-  type: 'light',
-
-  // Color definitions for the theme in HEX
-  palette: {
-    primary: '#F94878',
-    secondary: '#753AA8'
-  },
-
-  // Pattern Definitions
-  pattern: {
-
-    // Name of the pattern from heropatterns.com
-    name: 'morphing diamonds',
-
-    // Size of the background pattern
-    size: '100px'
-  },
-
-  // Social media definitions, value is the URL
-  social: {
-    behance: '',
-    bitbucket: '',
-    codepen: '',
-    dribbble: '',
-    facebook: '',
-    github: '',
-    instagram: '',
-    linkedin: '',
-    medium: '',
-    npm: '',
-    stackoverflow: '',
-    twitter: ''
+      // Google Analytics Token
+      ga: ''
+    },
+  
+    // Navigation definitions
+    // Each key is displayed in the navigation with the value as the url
+    navigation: {
+      Blog: 'www.myblog.com'
+    },
+  
+    // Light or Dark mode selection
+    // Default: light
+    type: 'light',
+  
+    // Color definitions for the theme in HEX
+    palette: {
+      primary: '#F94878',
+      secondary: '#753AA8'
+    },
+  
+    // Pattern Definitions
+    pattern: {
+  
+      // Name of the pattern from heropatterns.com
+      name: 'morphing diamonds',
+  
+      // Size of the background pattern
+      size: '100px'
+    },
+  
+    // Social media definitions, value is the URL
+    social: {
+      behance: '',
+      bitbucket: '',
+      codepen: '',
+      dribbble: '',
+      facebook: '',
+      github: '',
+      instagram: '',
+      linkedin: '',
+      medium: '',
+      npm: '',
+      stackoverflow: '',
+      twitter: ''
+    }
   }
 });
 ```
