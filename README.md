@@ -1,4 +1,4 @@
-![Hero Patterns SCSS Cover](https://raw.githubusercontent.com/Polyneue/hubblejs-default-theme/master/docs/hubblejs-header-dark.jpg)
+# HubbleJS Default Theme
 
 ## Introduction
 This is the default theme for [HubbleJS](https://github.com/Polyneue/hubblejs), the developer portfolio powered by Github. This theme makes it easy to get an optimized and easily customizable portfolio site up in minutes.
@@ -9,6 +9,12 @@ This is the default theme for [HubbleJS](https://github.com/Polyneue/hubblejs), 
 * Fast page speed due to static files
 * Web Accessibility Support
 * Structured data for [Schema.org](http://schema.org/)
+
+## Examples
+
+The default theme comes with both a [dark](./examples/images/hubblejs-default-theme-dark-example.png) and [light](./examples/images/hubblejs-default-theme-light-example.png) base options. To see other examples of generated themes, visit the [examples](./examples/README.md) directory.
+
+![HubbleJS Default Theme - Light](./examples/images/hubblejs-default-theme-light-example.png)
 
 ## Getting Started
 
@@ -117,4 +123,4 @@ The HubbleJS default theme uses [SemVer](http://semver.org/) for versioning. For
 
 ## Copyright and License
 
-Code copyright 2018 Ed Mendoza. Code released under the [MIT license](https://github.com/Polyneue/hubblejs-default-theme/blob/master/LICENSE)
+Code copyright 2018 Ed Mendoza. Code released under the [MIT license](./LICENSE)
