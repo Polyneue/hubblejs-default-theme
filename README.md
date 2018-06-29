@@ -1,6 +1,5 @@
 # HubbleJS Default Theme
 
-## Introduction
 This is the default theme for [HubbleJS](https://github.com/Polyneue/hubblejs), the developer portfolio powered by Github. This theme makes it easy to get an optimized and easily customizable portfolio site up in minutes.
 
 ## Features
