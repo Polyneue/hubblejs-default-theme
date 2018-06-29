@@ -12,7 +12,7 @@ This is the default theme for [HubbleJS](https://github.com/Polyneue/hubblejs), 
 
 ## Examples
 
-The default theme comes with both a [dark](./examples/images/hubblejs-default-theme-dark-example.png) and [light](./examples/images/hubblejs-default-theme-light-example.png) base options. To see other examples of generated themes, visit the [examples](./examples/README.md) directory.
+The default theme comes with both a [dark](./examples/images/hubblejs-default-theme-dark-example.png) and [light](./examples/images/hubblejs-default-theme-light-example.png) base options. To see other examples of generated themes, visit the [examples](./examples) directory.
 
 ![HubbleJS Default Theme - Light](./examples/images/hubblejs-default-theme-light-example.png)
 
