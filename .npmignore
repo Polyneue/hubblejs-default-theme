@@ -3,3 +3,6 @@ build
 
 # styles
 src/scss
+
+# examples
+examples
