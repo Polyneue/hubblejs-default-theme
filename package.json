@@ -1,6 +1,6 @@
 {
   "name": "hubblejs-default-theme",
-  "version": "0.0.11",
+  "version": "1.0.0",
   "description": "Default theme for HubbleJS Github portfolio generator",
   "main": "index.js",
   "scripts": {
