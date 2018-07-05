@@ -7,6 +7,7 @@ This is the default theme for [HubbleJS](https://github.com/Polyneue/hubblejs), 
 * Easily customizable via colors, patterns, and project selection
 * Fast page speed due to static files
 * Web Accessibility Support
+* Competitive [metrics](#metrics) in Google [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 * Structured data for [Schema.org](http://schema.org/)
 
 ## Examples
@@ -117,13 +118,11 @@ const hubble = new Hubble({
 ```
 
 ## Metrics
-There are a variety of ways to measure the performance of a website, for HubbleJS I decided to use Google Chrome's [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audit, as it seems to be a standard available to everyone.
+There are a variety of ways to measure the performance of a website, for HubbleJS I decided to use Google Chrome's [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audit, as it seems to be a standard available to everyone. The following results are from a site using the topography pattern, with 8 repositories, 3 gists, and 3 contributing repositories. 
 
 | Performance | Accessibility | Best Practices | SEO |
 | ----------- | ------------- | -------------- | --- |
 |          94 |           100 |             94 |  89 |
-
-##### This test was run on a site using the topography pattern, with 8 repositories, 3 gists, and 3 contributing repositories. 
 
 ## Versioning
 
