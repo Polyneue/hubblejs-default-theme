@@ -116,10 +116,25 @@ const hubble = new Hubble({
 });
 ```
 
+## Metrics
+There are a variety of ways to measure the performance of a website, for HubbleJS I decided to use Google Chrome's [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audit, as it seems to be a standard available to everyone.
+
+| Performance | Accessibility | Best Practices | SEO |
+| ----------- | ------------- | -------------- | --- |
+|          94 |           100 |             94 |  89 |
+
+##### This test was run on a site using the topography pattern, with 8 repositories, 3 gists, and 3 contributing repositories. 
+
 ## Versioning
 
 The HubbleJS default theme uses [SemVer](http://semver.org/) for versioning. For available versions, see the [tags for this repository](https://github.com/Polyneue/hubblejs-default-theme/releases).
 
-## Copyright and License
+## License and Attribution
 
-Code copyright 2018 Ed Mendoza. Code released under the [MIT license](./LICENSE)
+Copyright (c) 2018 Ed Mendoza.   
+Code released under the [MIT license](./LICENSE).
+
+### Attributions
+
+* [Hero Patterns](http://www.heropatterns.com/) by Steve Schoger, used under [CC by 4.0](https://creativecommons.org/licenses/by/4.0/)
+* [Avatar](http://avatars.adorable.io/) by [adorable.io](https://adorable.io/), used under [MIT License](https://github.com/adorableio/avatars-api-middleware/blob/develop/LICENSE)
