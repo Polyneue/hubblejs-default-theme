@@ -118,7 +118,7 @@ const hubble = new Hubble({
 ```
 
 ## Metrics
-There are a variety of ways to measure the performance of a website, for HubbleJS I decided to use Google Chrome's [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audit, as it seems to be a standard available to everyone. The following results are from a site using the topography pattern, with 8 repositories, 3 gists, and 3 contributing repositories. 
+There are a variety of ways to measure the performance of a website, HubbleJS uses Google Chrome's [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audit. The following results are from a site using the topography pattern, with 8 repositories, 3 gists, and 3 contributing repositories. 
 
 | Performance | Accessibility | Best Practices | SEO |
 | ----------- | ------------- | -------------- | --- |
