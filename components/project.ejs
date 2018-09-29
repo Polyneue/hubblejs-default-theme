@@ -6,7 +6,7 @@
 %>
 <li
     class="project js-filter-project"
-    data-language="<%= project.primaryLanguage.name %>"
+    data-language="<%= (project.primaryLanguage) ? project.primaryLanguage.name : '' %>"
     itemscope
     itemtype="http://schema.org/Code"
 >
@@ -24,10 +24,12 @@
         <% } %>
 
         <div class="project__footer">
-            <p class="project__language">
-                <span class="project__language-color" style="background-color: <%= project.primaryLanguage.color %>" aria-hidden="true"></span>
-                <span class="project__language-name"><%= project.primaryLanguage.name %></span>
-            </p>
+            <% if (project.primaryLanguage) { %>
+                <p class="project__language">
+                    <span class="project__language-color" style="background-color: <%= project.primaryLanguage.color %>" aria-hidden="true"></span>
+                    <span class="project__language-name"><%= project.primaryLanguage.name %></span>
+                </p>
+            <% } %>
             <% if (project.stargazers.totalCount !== 0) { %>
                 <p class="project__star">
                     <span class="project__star-count"><%= project.stargazers.totalCount %></span>

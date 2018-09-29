@@ -9,6 +9,7 @@ $contribution-border: 1px solid $background-accent;
 .contribution {
     border-bottom: $contribution-border;
     border-right: $contribution-border;
+    border-left: 5px solid $secondary;
 
     &__label {
         display: block;

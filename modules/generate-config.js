@@ -9,7 +9,7 @@ const generateConfig = function (data) {
       meta: {
         description: '',
         title: '',
-        favicon: path.join(__dirname, '..', 'src', 'favicon.ico')
+        favicon: path.join(__dirname, '..', 'src', 'favicon-32x32.png')
       },
       type: 'light',
       display: {

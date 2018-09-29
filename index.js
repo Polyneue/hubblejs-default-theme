@@ -37,7 +37,7 @@ const renderTemplate = async function renderTemplate(data, output) {
     fs.writeFileSync(`${dir}/assets/pattern.svg`, data.pattern, 'utf8');
 
     // Handle Favicon
-    fs.copyFileSync(data.theme.meta.favicon, `${dir}/favicon.ico`);
+    fs.copyFileSync(data.theme.meta.favicon, `${dir}/favicon.png`);
 
     // Handle Project and Deferred CSS
     fs.copyFileSync(`${__dirname}/src/css/project.min.css`, `${dir}/assets/project.min.css`);
